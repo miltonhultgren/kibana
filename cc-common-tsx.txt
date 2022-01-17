@@ -1,0 +1,5 @@
+/Users/milton/dev/kibana/x-pack/plugins/infra/common/inventory_models/shared/components/cloud_toolbar_items.tsx
+  19:49  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/common/inventory_models/shared/components/metrics_and_groupby_toolbar_items.tsx
+  30:61  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity

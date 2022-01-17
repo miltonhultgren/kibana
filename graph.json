@@ -1,0 +1,49 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Churn vs Complexities",
+  "data": {
+    "url": {
+      "index": "churn-complexity",
+      "body": {
+        "query": {"bool": {"must": [{"range": {"complexity": {"gt": 0}}}]}},
+        "size": 500,
+        "_source": ["path", "churn", "complexity"]
+      }
+    },
+    "format": {"property": "hits.hits"}
+  },
+  "transform": [
+    {"calculate": "27.5", "as": "rule_churn"},
+    {"calculate": "40", "as": "rule_complexity"}
+  ],
+  "layer": [
+    {
+      "mark": "point",
+      "encoding": {
+        "x": {
+          "field": "_source.churn",
+          "type": "quantitative",
+          "axis": {"title": "Churn"}
+        },
+        "y": {
+          "field": "_source.complexity",
+          "type": "quantitative",
+          "axis": {"title": "Complexity"}
+        },
+        "tooltip": [
+          {"field": "_source.path"},
+          {"field": "_source.complexity"},
+          {"field": "_source.churn"}
+        ]
+      }
+    },
+    {
+      "mark": "rule",
+      "encoding": {"x": {"field": "rule_churn"}, "size": {"value": 1}}
+    },
+    {
+      "mark": "rule",
+      "encoding": {"y": {"field": "rule_complexity"}, "size": {"value": 1}}
+    }
+  ]
+}

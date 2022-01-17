@@ -1,0 +1,1243 @@
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/alerting/common/components/metrics_alert_dropdown.tsx
+  104:8   error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  128:8   error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  175:72  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/alerting/common/criterion_preview_chart/criterion_preview_chart.tsx
+  36:36  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed  sonarjs/cognitive-complexity
+  48:69  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed  sonarjs/cognitive-complexity
+  51:91  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  59:33  error  Refactor this function to reduce its Cognitive Complexity from 7 to the 0 allowed  sonarjs/cognitive-complexity
+  75:59  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/alerting/common/criterion_preview_chart/threshold_annotations.tsx
+  39:31  error  Refactor this function to reduce its Cognitive Complexity from 10 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/alerting/common/group_by_expression/group_by_expression.tsx
+  43:4   error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  46:38  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/alerting/inventory/components/alert_flyout.tsx
+  24:88  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  31:8   error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/alerting/inventory/components/expression.test.tsx
+  205:100  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/alerting/inventory/components/expression.tsx
+  112:53  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed   sonarjs/cognitive-complexity
+  129:40  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+  137:40  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed   sonarjs/cognitive-complexity
+  148:18  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+  159:19  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed   sonarjs/cognitive-complexity
+  187:30  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+  222:47  error  Refactor this function to reduce its Cognitive Complexity from 5 to the 0 allowed   sonarjs/cognitive-complexity
+  239:45  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed   sonarjs/cognitive-complexity
+  250:16  error  Refactor this function to reduce its Cognitive Complexity from 11 to the 0 allowed  sonarjs/cognitive-complexity
+  300:42  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed   sonarjs/cognitive-complexity
+  441:68  error  Refactor this function to reduce its Cognitive Complexity from 11 to the 0 allowed  sonarjs/cognitive-complexity
+  461:39  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed   sonarjs/cognitive-complexity
+  470:38  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+  493:9   error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+  502:9   error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+  510:49  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed   sonarjs/cognitive-complexity
+  553:31  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+  605:39  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+  700:85  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed   sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/alerting/inventory/components/expression_chart.tsx
+   49:4   error  Refactor this function to reduce its Cognitive Complexity from 13 to the 0 allowed  sonarjs/cognitive-complexity
+   51:8   error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed   sonarjs/cognitive-complexity
+   92:36  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed   sonarjs/cognitive-complexity
+  226:72  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed   sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/alerting/inventory/components/metric.tsx
+   88:11  error  Refactor this function to reduce its Cognitive Complexity from 11 to the 0 allowed  sonarjs/cognitive-complexity
+  103:8   error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+  110:45  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed   sonarjs/cognitive-complexity
+  117:10  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed   sonarjs/cognitive-complexity
+  130:9   error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed   sonarjs/cognitive-complexity
+  145:49  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+  157:9   error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+  301:47  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed   sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/alerting/inventory/components/node_type.tsx
+  39:25  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/alerting/inventory/components/validation.tsx
+  18:17  error  Refactor this function to reduce its Cognitive Complexity from 39 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/alerting/log_threshold/components/alert_dropdown.tsx
+  30:33  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  62:32  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/alerting/log_threshold/components/alert_flyout.tsx
+  17:43  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  22:8   error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/alerting/log_threshold/components/expression_editor/criteria.tsx
+   48:58  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed  sonarjs/cognitive-complexity
+  218:28  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/alerting/log_threshold/components/expression_editor/criterion.tsx
+   58:81  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed   sonarjs/cognitive-complexity
+  110:4   error  Refactor this function to reduce its Cognitive Complexity from 10 to the 0 allowed  sonarjs/cognitive-complexity
+  120:59  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed   sonarjs/cognitive-complexity
+  133:24  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed   sonarjs/cognitive-complexity
+  268:41  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed   sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/alerting/log_threshold/components/expression_editor/criterion_preview_chart.tsx
+   65:4   error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed   sonarjs/cognitive-complexity
+   66:93  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed   sonarjs/cognitive-complexity
+  126:4   error  Refactor this function to reduce its Cognitive Complexity from 28 to the 0 allowed  sonarjs/cognitive-complexity
+  168:37  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed   sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/alerting/log_threshold/components/expression_editor/editor.tsx
+   62:3   error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+   94:13  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  120:61  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed  sonarjs/cognitive-complexity
+  164:3   error  Refactor this function to reduce its Cognitive Complexity from 6 to the 0 allowed  sonarjs/cognitive-complexity
+  176:38  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed  sonarjs/cognitive-complexity
+  186:36  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed  sonarjs/cognitive-complexity
+  219:18  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  240:27  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  250:15  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  260:59  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/alerting/log_threshold/components/expression_editor/threshold.tsx
+  56:92  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  99:35  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/alerting/log_threshold/components/expression_editor/type_switcher.tsx
+  53:69  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  57:73  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  93:31  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/alerting/metric_anomaly/components/alert_flyout.tsx
+  24:79  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  29:8   error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/alerting/metric_anomaly/components/expression.tsx
+   57:52  error  Refactor this function to reduce its Cognitive Complexity from 7 to the 0 allowed  sonarjs/cognitive-complexity
+   82:16  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+   91:21  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  129:42  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed  sonarjs/cognitive-complexity
+  141:40  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed  sonarjs/cognitive-complexity
+  153:16  error  Refactor this function to reduce its Cognitive Complexity from 7 to the 0 allowed  sonarjs/cognitive-complexity
+  285:54  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  300:58  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/alerting/metric_anomaly/components/influencer_filter.tsx
+  37:11  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed  sonarjs/cognitive-complexity
+  39:8   error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  49:8   error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  68:40  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/alerting/metric_anomaly/components/node_type.tsx
+  41:25  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/alerting/metric_anomaly/components/severity_threshold.tsx
+  64:25  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/alerting/metric_anomaly/components/validation.tsx
+  12:17  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/alerting/metric_threshold/components/alert_flyout.tsx
+  22:43  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  27:8   error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/alerting/metric_threshold/components/expression.tsx
+   61:53  error  Refactor this function to reduce its Cognitive Complexity from 10 to the 0 allowed  sonarjs/cognitive-complexity
+   77:54  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed   sonarjs/cognitive-complexity
+   89:31  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+   97:40  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed   sonarjs/cognitive-complexity
+  108:18  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed   sonarjs/cognitive-complexity
+  119:19  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed   sonarjs/cognitive-complexity
+  139:39  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed   sonarjs/cognitive-complexity
+  154:30  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed   sonarjs/cognitive-complexity
+  167:18  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+  179:47  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed   sonarjs/cognitive-complexity
+  198:45  error  Refactor this function to reduce its Cognitive Complexity from 8 to the 0 allowed   sonarjs/cognitive-complexity
+  219:46  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed   sonarjs/cognitive-complexity
+  226:16  error  Refactor this function to reduce its Cognitive Complexity from 9 to the 0 allowed   sonarjs/cognitive-complexity
+  265:8   error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+  277:48  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed   sonarjs/cognitive-complexity
+  286:45  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed   sonarjs/cognitive-complexity
+  311:42  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed   sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/alerting/metric_threshold/components/expression_chart.tsx
+  50:4   error  Refactor this function to reduce its Cognitive Complexity from 11 to the 0 allowed  sonarjs/cognitive-complexity
+  67:36  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed   sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/alerting/metric_threshold/components/expression_row.test.tsx
+  69:76  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  84:79  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/alerting/metric_threshold/components/expression_row.tsx
+   74:68  error  Refactor this function to reduce its Cognitive Complexity from 11 to the 0 allowed  sonarjs/cognitive-complexity
+   91:34  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+   94:18  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+  126:24  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+  132:24  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+  142:24  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+  151:49  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed   sonarjs/cognitive-complexity
+  333:90  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed   sonarjs/cognitive-complexity
+  334:41  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/alerting/metric_threshold/components/validation.tsx
+  18:17  error  Refactor this function to reduce its Cognitive Complexity from 39 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/apps/legacy_app.tsx
+  34:48  error  Refactor this function to reduce its Cognitive Complexity from 8 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/apps/logs_app.tsx
+  56:73  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/apps/metrics_app.tsx
+  57:73  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/auto_sizer.tsx
+   54:3   error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed   sonarjs/cognitive-complexity
+   68:10  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed   sonarjs/cognitive-complexity
+   78:56  error  Refactor this function to reduce its Cognitive Complexity from 21 to the 0 allowed  sonarjs/cognitive-complexity
+  159:30  error  Refactor this function to reduce its Cognitive Complexity from 6 to the 0 allowed   sonarjs/cognitive-complexity
+  178:52  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed   sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/autocomplete_field/autocomplete_field.tsx
+   47:10  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+   96:10  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  102:10  error  Refactor this function to reduce its Cognitive Complexity from 5 to the 0 allowed  sonarjs/cognitive-complexity
+  127:72  error  Refactor this function to reduce its Cognitive Complexity from 9 to the 0 allowed  sonarjs/cognitive-complexity
+  162:70  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  185:40  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  191:53  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  209:41  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  217:34  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  227:23  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  237:34  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  246:27  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed  sonarjs/cognitive-complexity
+  259:27  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed  sonarjs/cognitive-complexity
+  271:90  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/autocomplete_field/suggestion_item.tsx
+   47:31  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+   88:63  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  105:84  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/basic_table/row_expansion_button.tsx
+  22:4  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  24:8  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/data_search_error_callout.tsx
+  22:35  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  42:86  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed  sonarjs/cognitive-complexity
+  62:90  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/data_search_progress.tsx
+  17:45  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  19:8   error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/document_title.tsx
+  51:12  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  63:12  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/error_page.tsx
+  20:86  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/formatted_time.tsx
+  17:3  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  31:3  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/loading_overlay_wrapper.tsx
+  19:57  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  28:42  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/log_stream/log_stream.tsx
+   94:4   error  Refactor this function to reduce its Cognitive Complexity from 7 to the 0 allowed  sonarjs/cognitive-complexity
+   96:8   error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  125:60  error  Refactor this function to reduce its Cognitive Complexity from 5 to the 0 allowed  sonarjs/cognitive-complexity
+  160:43  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  185:55  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed  sonarjs/cognitive-complexity
+  237:31  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  267:70  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/log_stream/log_stream_embeddable.tsx
+  49:10  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  58:10  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  68:11  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/log_stream/log_stream_error_boundary.tsx
+  30:18  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/logging/log_analysis_job_status/log_analysis_job_problem_indicator.tsx
+  33:4  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/logging/log_analysis_job_status/quality_warning_notices.tsx
+  101:19  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/logging/log_analysis_results/analyze_in_ml_button.tsx
+  22:9  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/logging/log_analysis_results/anomaly_severity_indicator.tsx
+  21:56  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/logging/log_analysis_results/category_expression.tsx
+  16:61  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/logging/log_analysis_results/datasets_selector.tsx
+  32:8  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/logging/log_analysis_setup/create_job_button.tsx
+  17:65  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  41:4   error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/logging/log_analysis_setup/initial_configuration_step/analysis_setup_indices_form.tsx
+  33:46  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  44:40  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/logging/log_analysis_setup/initial_configuration_step/analysis_setup_timerange_form.tsx
+   42:10  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+   63:4   error  Refactor this function to reduce its Cognitive Complexity from 6 to the 0 allowed  sonarjs/cognitive-complexity
+   67:37  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+   70:35  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  158:46  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  172:46  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/logging/log_analysis_setup/initial_configuration_step/index_setup_dataset_filter.tsx
+   31:80  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+   35:38  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+   50:8   error  Refactor this function to reduce its Cognitive Complexity from 5 to the 0 allowed  sonarjs/cognitive-complexity
+  104:58  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/logging/log_analysis_setup/initial_configuration_step/index_setup_row.tsx
+   27:4   error  Refactor this function to reduce its Cognitive Complexity from 8 to the 0 allowed  sonarjs/cognitive-complexity
+   41:8   error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+   57:8   error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  111:29  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/logging/log_analysis_setup/initial_configuration_step/initial_configuration_step.tsx
+  107:82  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  126:75  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  153:60  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/logging/log_analysis_setup/process_step/process_step.tsx
+  36:83  error  Refactor this function to reduce its Cognitive Complexity from 6 to the 0 allowed   sonarjs/cognitive-complexity
+  56:4   error  Refactor this function to reduce its Cognitive Complexity from 10 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/logging/log_analysis_setup/setup_flyout/log_entry_categories_setup_view.tsx
+  47:8  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/logging/log_analysis_setup/setup_flyout/log_entry_rate_setup_view.tsx
+  40:8  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/logging/log_analysis_setup/setup_flyout/module_list_card.tsx
+  30:4   error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed  sonarjs/cognitive-complexity
+  41:29  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/logging/log_analysis_setup/setup_flyout/setup_flyout.tsx
+  28:39  error  Refactor this function to reduce its Cognitive Complexity from 8 to the 0 allowed  sonarjs/cognitive-complexity
+  67:48  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  86:39  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/logging/log_analysis_setup/user_management_link.tsx
+  14:84  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/logging/log_datepicker.tsx
+  28:4   error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  30:33  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/logging/log_entry_examples/log_entry_examples.tsx
+  29:4  error  Refactor this function to reduce its Cognitive Complexity from 6 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/logging/log_entry_flyout/log_entry_actions_menu.tsx
+   20:21  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+   94:72  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  114:69  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/logging/log_entry_flyout/log_entry_fields_table.tsx
+   24:8   error  Refactor this function to reduce its Cognitive Complexity from 5 to the 0 allowed  sonarjs/cognitive-complexity
+  118:70  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/logging/log_entry_flyout/log_entry_flyout.tsx
+  42:25  error  Refactor this function to reduce its Cognitive Complexity from 12 to the 0 allowed  sonarjs/cognitive-complexity
+  56:16  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed   sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/logging/log_highlights_menu.tsx
+  43:4   error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  55:22  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/logging/log_minimap/density_chart.tsx
+  30:4   error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed  sonarjs/cognitive-complexity
+  69:19  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  76:19  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/logging/log_minimap/highlighted_interval.tsx
+  30:4  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/logging/log_minimap/log_minimap.tsx
+   48:10  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+   91:10  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed  sonarjs/cognitive-complexity
+  168:21  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/logging/log_minimap/search_marker.tsx
+  49:10  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/logging/log_minimap/search_marker_tooltip.tsx
+  27:58  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/logging/log_minimap/search_markers.tsx
+  27:10  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/logging/log_minimap/time_label_formatter.tsx
+  9:17  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/logging/log_minimap/time_ruler.tsx
+  57:21  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/logging/log_search_controls/log_search_buttons.tsx
+  23:92  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  31:88  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/logging/log_search_controls/log_search_input.tsx
+  36:72  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/logging/log_source_error_page.tsx
+  74:71  error  Refactor this function to reduce its Cognitive Complexity from 9 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/logging/log_text_scale_controls.tsx
+  21:45  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/logging/log_text_stream/column_headers.tsx
+   36:55  error  Refactor this function to reduce its Cognitive Complexity from 18 to the 0 allowed  sonarjs/cognitive-complexity
+  115:68  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+  131:72  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/logging/log_text_stream/field_value.tsx
+  19:72  error  Refactor this function to reduce its Cognitive Complexity from 10 to the 0 allowed  sonarjs/cognitive-complexity
+  56:48  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/logging/log_text_stream/highlighting.tsx
+  45:39  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/logging/log_text_stream/loading_item_view.tsx
+   52:10  error  Refactor this function to reduce its Cognitive Complexity from 9 to the 0 allowed  sonarjs/cognitive-complexity
+  100:26  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  102:29  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  110:96  error  Refactor this function to reduce its Cognitive Complexity from 5 to the 0 allowed  sonarjs/cognitive-complexity
+  146:81  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  179:4   error  Refactor this function to reduce its Cognitive Complexity from 7 to the 0 allowed  sonarjs/cognitive-complexity
+  201:19  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  214:92  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/logging/log_text_stream/log_entry_column.tsx
+  37:25  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+  39:24  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+  40:26  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+  69:28  error  Refactor this function to reduce its Cognitive Complexity from 14 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/logging/log_text_stream/log_entry_context_menu.tsx
+  48:4  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/logging/log_text_stream/log_entry_field_column.tsx
+  36:4   error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed  sonarjs/cognitive-complexity
+  60:13  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/logging/log_text_stream/log_entry_message_column.tsx
+   36:70  error  Refactor this function to reduce its Cognitive Complexity from 5 to the 0 allowed  sonarjs/cognitive-complexity
+   64:13  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed  sonarjs/cognitive-complexity
+   77:47  error  Refactor this function to reduce its Cognitive Complexity from 9 to the 0 allowed  sonarjs/cognitive-complexity
+  107:27  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/logging/log_text_stream/log_entry_row.tsx
+   71:24  error  Refactor this function to reduce its Cognitive Complexity from 34 to the 0 allowed  sonarjs/cognitive-complexity
+  266:13  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/logging/log_text_stream/log_entry_timestamp_column.tsx
+  21:39  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/logging/log_text_stream/measurable_item_view.tsx
+  26:42  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  49:10  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/logging/log_text_stream/scrollable_log_text_stream_view.tsx
+   76:17  error  Refactor this function to reduce its Cognitive Complexity from 11 to the 0 allowed  sonarjs/cognitive-complexity
+  128:10  error  Refactor this function to reduce its Cognitive Complexity from 59 to the 0 allowed  sonarjs/cognitive-complexity
+  309:58  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+  316:29  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+  339:8   error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed   sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/logging/log_text_stream/text_styles.tsx
+  17:24  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  66:64  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/logging/log_text_stream/vertical_scroll_panel.tsx
+   69:70  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+   80:91  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+   94:34  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  110:33  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  128:64  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  146:58  error  Refactor this function to reduce its Cognitive Complexity from 5 to the 0 allowed  sonarjs/cognitive-complexity
+  172:90  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  187:10  error  Refactor this function to reduce its Cognitive Complexity from 7 to the 0 allowed  sonarjs/cognitive-complexity
+  219:10  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed  sonarjs/cognitive-complexity
+  240:10  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  266:28  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/resettable_error_boundary.tsx
+  35:3  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  52:3  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/saved_views/manage_views_flyout.tsx
+   41:59  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  100:34  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  118:34  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/saved_views/toolbar_control.tsx
+   22:17  error  Refactor this function to reduce its Cognitive Complexity from 6 to the 0 allowed  sonarjs/cognitive-complexity
+   77:44  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+   85:46  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+   96:46  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  106:16  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  112:16  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  120:16  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  128:16  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  135:16  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  243:63  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/saved_views/view_list_modal.tsx
+  25:17  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  37:35  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  52:60  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/components/subscription_splash_content.tsx
+  33:54  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/containers/logs/log_analysis/log_analysis_capabilities.tsx
+  18:46  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/containers/logs/log_analysis/log_analysis_cleanup.tsx
+  17:3  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed  sonarjs/cognitive-complexity
+  46:3  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/containers/logs/log_analysis/log_analysis_module.tsx
+   81:71  error  Refactor this function to reduce its Cognitive Complexity from 5 to the 0 allowed  sonarjs/cognitive-complexity
+  110:26  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/containers/logs/log_analysis/log_analysis_module_definition.tsx
+  29:8   error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  59:39  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/containers/logs/log_analysis/log_analysis_module_status.tsx
+   71:34  error  Refactor this function to reduce its Cognitive Complexity from 10 to the 0 allowed  sonarjs/cognitive-complexity
+  190:80  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+  197:95  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+  208:60  error  Refactor this function to reduce its Cognitive Complexity from 14 to the 0 allowed  sonarjs/cognitive-complexity
+  246:51  error  Refactor this function to reduce its Cognitive Complexity from 7 to the 0 allowed   sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/containers/logs/log_filter/with_log_filter_url_state.tsx
+  22:28  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  27:32  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  36:58  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/containers/logs/log_flyout.tsx
+   30:59  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+   51:45  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+   71:31  error  Refactor this function to reduce its Cognitive Complexity from 8 to the 0 allowed  sonarjs/cognitive-complexity
+   85:39  error  Refactor this function to reduce its Cognitive Complexity from 8 to the 0 allowed  sonarjs/cognitive-complexity
+  103:71  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  112:43  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  115:52  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  118:51  error  Refactor this function to reduce its Cognitive Complexity from 5 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/containers/logs/log_highlights/log_entry_highlights.tsx
+  33:31  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed  sonarjs/cognitive-complexity
+  62:16  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed  sonarjs/cognitive-complexity
+  82:8   error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/containers/logs/log_highlights/next_and_previous.tsx
+  34:8   error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  43:16  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  49:16  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed  sonarjs/cognitive-complexity
+  59:44  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed  sonarjs/cognitive-complexity
+  68:8   error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  73:8   error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  80:48  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  88:44  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/containers/logs/log_position/with_log_position_url_state.tsx
+   40:8   error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+   53:64  error  Refactor this function to reduce its Cognitive Complexity from 7 to the 0 allowed   sonarjs/cognitive-complexity
+   75:72  error  Refactor this function to reduce its Cognitive Complexity from 25 to the 0 allowed  sonarjs/cognitive-complexity
+  122:69  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+  132:44  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed   sonarjs/cognitive-complexity
+  137:46  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+  139:32  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+  140:63  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/containers/logs/log_summary/log_summary.tsx
+  29:22  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/containers/logs/with_log_textview.tsx
+  30:31  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed  sonarjs/cognitive-complexity
+  38:35  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed  sonarjs/cognitive-complexity
+  50:69  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  58:45  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  61:40  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/containers/metrics_explorer/with_metrics_explorer_options_url_state.tsx
+   51:75  error  Refactor this function to reduce its Cognitive Complexity from 6 to the 0 allowed   sonarjs/cognitive-complexity
+   75:10  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+   86:10  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+   97:10  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+  107:80  error  Refactor this function to reduce its Cognitive Complexity from 10 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/containers/metrics_source/source.tsx
+   23:3   error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+   35:63  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed  sonarjs/cognitive-complexity
+   45:31  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+   63:92  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+   73:29  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+   84:92  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+   94:29  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  103:40  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  129:35  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  132:8   error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/containers/ml/infra_ml_capabilities.tsx
+  21:42  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/containers/ml/infra_ml_cleanup.tsx
+  17:3  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed  sonarjs/cognitive-complexity
+  46:3  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/containers/ml/infra_ml_module_definition.tsx
+  29:8   error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  59:39  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/containers/ml/infra_ml_module_status.tsx
+   71:34  error  Refactor this function to reduce its Cognitive Complexity from 9 to the 0 allowed   sonarjs/cognitive-complexity
+  189:80  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+  196:95  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+  207:60  error  Refactor this function to reduce its Cognitive Complexity from 14 to the 0 allowed  sonarjs/cognitive-complexity
+  248:51  error  Refactor this function to reduce its Cognitive Complexity from 7 to the 0 allowed   sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/containers/saved_view/saved_view.tsx
+   55:44  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  103:8   error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  108:24  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  132:31  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  152:35  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed  sonarjs/cognitive-complexity
+  171:36  error  Refactor this function to reduce its Cognitive Complexity from 5 to the 0 allowed  sonarjs/cognitive-complexity
+  195:35  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  197:28  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  214:34  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  218:34  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  227:16  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  234:37  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  245:47  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  254:16  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  262:16  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  267:16  error  Refactor this function to reduce its Cognitive Complexity from 5 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/containers/with_kuery_autocompletion.tsx
+  62:5  error  Refactor this function to reduce its Cognitive Complexity from 9 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/containers/with_source/with_source.tsx
+  41:84  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/hooks/use_bulk_get_saved_object.tsx
+  20:21  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/hooks/use_create_saved_object.tsx
+  24:78  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/hooks/use_delete_saved_object.tsx
+  18:18  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/hooks/use_find_saved_object.tsx
+  20:51  error  Refactor this function to reduce its Cognitive Complexity from 7 to the 0 allowed  sonarjs/cognitive-complexity
+  53:40  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/hooks/use_get_saved_object.tsx
+  18:18  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/hooks/use_http_request.tsx
+  16:17  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  32:25  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  42:30  error  Refactor this function to reduce its Cognitive Complexity from 5 to the 0 allowed  sonarjs/cognitive-complexity
+  87:30  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/hooks/use_kibana_index_patterns.mock.tsx
+  90:27  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/hooks/use_kibana_timefilter_time.tsx
+  21:34  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  52:15  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  66:16  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/hooks/use_link_props.tsx
+   36:14  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+   44:36  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+   48:33  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed   sonarjs/cognitive-complexity
+   55:37  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed   sonarjs/cognitive-complexity
+   59:27  error  Refactor this function to reduce its Cognitive Complexity from 5 to the 0 allowed   sonarjs/cognitive-complexity
+   69:30  error  Refactor this function to reduce its Cognitive Complexity from 20 to the 0 allowed  sonarjs/cognitive-complexity
+  112:74  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed   sonarjs/cognitive-complexity
+  120:38  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+  125:3   error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/hooks/use_prefix_path_with_basepath.tsx
+  13:31  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/hooks/use_readonly_badge.tsx
+  15:16  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/hooks/use_update_saved_object.tsx
+  24:90  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/link_to/redirect_to_host_detail_via_ip.tsx
+  28:30  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/link_to/redirect_to_inventory.tsx
+  21:14  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+  27:10  error  Refactor this function to reduce its Cognitive Complexity from 10 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/link_to/redirect_to_logs.tsx
+  25:74  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/link_to/redirect_to_node_detail.tsx
+  45:20  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/link_to/redirect_to_node_logs.tsx
+  35:28  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  82:20  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/logs/log_entry_categories/page_content.tsx
+   34:49  error  Refactor this function to reduce its Cognitive Complexity from 7 to the 0 allowed  sonarjs/cognitive-complexity
+   49:16  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  117:4   error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/logs/log_entry_categories/page_providers.tsx
+  16:88  error  Refactor this function to reduce its Cognitive Complexity from 6 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/logs/log_entry_categories/page_results_content.tsx
+   47:34  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  129:72  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  158:8   error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/logs/log_entry_categories/sections/top_categories/analyze_dataset_in_ml_action.tsx
+  45:9  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/logs/log_entry_categories/sections/top_categories/category_example_message.tsx
+  43:76  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/logs/log_entry_categories/sections/top_categories/log_entry_count_sparkline.tsx
+  21:8  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  31:8  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/logs/log_entry_categories/sections/top_categories/single_metric_comparison.tsx
+  18:40  error  Refactor this function to reduce its Cognitive Complexity from 5 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/logs/log_entry_categories/sections/top_categories/single_metric_sparkline.tsx
+  38:8  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/logs/log_entry_rate/page_content.tsx
+   38:48  error  Refactor this function to reduce its Cognitive Complexity from 22 to the 0 allowed  sonarjs/cognitive-complexity
+  158:4   error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/logs/log_entry_rate/page_providers.tsx
+  18:82  error  Refactor this function to reduce its Cognitive Complexity from 6 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/logs/log_entry_rate/page_results_content.tsx
+   49:22  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+   80:29  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  177:8   error  Refactor this function to reduce its Cognitive Complexity from 5 to the 0 allowed  sonarjs/cognitive-complexity
+  188:72  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/logs/log_entry_rate/sections/anomalies/anomalies_swimlane_visualisation.tsx
+  34:72  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  40:96  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  44:70  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/logs/log_entry_rate/sections/anomalies/expanded_row.tsx
+  30:31  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/logs/log_entry_rate/sections/anomalies/index.tsx
+  61:4  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/logs/log_entry_rate/sections/anomalies/log_entry_example.tsx
+   85:4   error  Refactor this function to reduce its Cognitive Complexity from 5 to the 0 allowed  sonarjs/cognitive-complexity
+  142:9   error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  149:32  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  288:71  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/logs/log_entry_rate/sections/anomalies/table.tsx
+  116:46  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  134:8   error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  228:62  error  Refactor this function to reduce its Cognitive Complexity from 5 to the 0 allowed  sonarjs/cognitive-complexity
+  296:4   error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/logs/log_entry_rate/use_log_entry_rate_results_url_state.tsx
+  48:49  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/logs/page_content.tsx
+  29:60  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/logs/page_template.tsx
+  25:4  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/logs/settings/form_elements.tsx
+   47:39  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+   53:15  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  123:8   error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed  sonarjs/cognitive-complexity
+  184:8   error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  188:92  error  Refactor this function to reduce its Cognitive Complexity from 5 to the 0 allowed  sonarjs/cognitive-complexity
+  219:66  error  Refactor this function to reduce its Cognitive Complexity from 9 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/logs/settings/form_field_props.tsx
+  12:85  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/logs/settings/index_pattern_configuration_panel.tsx
+  23:59  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  32:42  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  83:16  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/logs/settings/index_pattern_selector.tsx
+  20:74  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  31:61  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  62:51  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/logs/settings/indices_configuration_panel.tsx
+  25:52  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed  sonarjs/cognitive-complexity
+  60:58  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/logs/settings/log_columns_configuration_panel.tsx
+   44:60  error  Refactor this function to reduce its Cognitive Complexity from 8 to the 0 allowed  sonarjs/cognitive-complexity
+  143:62  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/logs/settings/source_configuration_form_errors.tsx
+  30:4  error  Refactor this function to reduce its Cognitive Complexity from 10 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/logs/settings/source_configuration_form_state.tsx
+  17:3   error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  22:10  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  32:16  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/logs/settings/source_configuration_settings.tsx
+  33:36  error  Refactor this function to reduce its Cognitive Complexity from 10 to the 0 allowed  sonarjs/cognitive-complexity
+  60:8   error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+  78:8   error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/logs/stream/page_content.tsx
+  22:62  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/logs/stream/page_logs_content.tsx
+   40:64  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed  sonarjs/cognitive-complexity
+   93:16  error  Refactor this function to reduce its Cognitive Complexity from 9 to the 0 allowed  sonarjs/cognitive-complexity
+  140:8   error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  153:20  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed  sonarjs/cognitive-complexity
+  176:14  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed  sonarjs/cognitive-complexity
+  196:80  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  251:77  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/logs/stream/page_no_indices_content.tsx
+  17:44  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/logs/stream/page_providers.tsx
+  29:59  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  48:58  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed  sonarjs/cognitive-complexity
+  79:61  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  96:74  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/logs/stream/page_view_log_in_context.tsx
+  27:50  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  33:35  error  Refactor this function to reduce its Cognitive Complexity from 6 to the 0 allowed  sonarjs/cognitive-complexity
+  76:20  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  77:21  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  81:83  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/index.tsx
+   49:68  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  146:39  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/inventory_view/components/bottom_drawer.tsx
+  31:61  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed  sonarjs/cognitive-complexity
+  36:16  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  41:34  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  85:35  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/inventory_view/components/layout.tsx
+  41:81  error  Refactor this function to reduce its Cognitive Complexity from 14 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/inventory_view/components/ml/anomaly_detection/anomalies_table/annomaly_summary.tsx
+  14:79  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/inventory_view/components/ml/anomaly_detection/anomalies_table/anomalies_table.tsx
+   71:4   error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+   77:42  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed  sonarjs/cognitive-complexity
+  188:46  error  Refactor this function to reduce its Cognitive Complexity from 6 to the 0 allowed  sonarjs/cognitive-complexity
+  226:76  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  240:8   error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed  sonarjs/cognitive-complexity
+  272:8   error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  276:8   error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  280:8   error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  284:8   error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  288:35  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  296:30  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  314:29  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  324:16  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed  sonarjs/cognitive-complexity
+  334:67  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  403:50  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  424:26  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  432:16  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/inventory_view/components/ml/anomaly_detection/anomalies_table/pagination.tsx
+  33:4  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/inventory_view/components/ml/anomaly_detection/anomaly_detection_flyout.tsx
+  19:42  error  Refactor this function to reduce its Cognitive Complexity from 7 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/inventory_view/components/ml/anomaly_detection/flyout_home.tsx
+   39:42  error  Refactor this function to reduce its Cognitive Complexity from 13 to the 0 allowed  sonarjs/cognitive-complexity
+   68:16  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+  188:50  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed   sonarjs/cognitive-complexity
+  232:44  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed   sonarjs/cognitive-complexity
+  319:71  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/inventory_view/components/ml/anomaly_detection/job_setup_screen.tsx
+   35:46  error  Refactor this function to reduce its Cognitive Complexity from 6 to the 0 allowed   sonarjs/cognitive-complexity
+   51:34  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed   sonarjs/cognitive-complexity
+   59:44  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed   sonarjs/cognitive-complexity
+   67:34  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed   sonarjs/cognitive-complexity
+   75:35  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed   sonarjs/cognitive-complexity
+   92:37  error  Refactor this function to reduce its Cognitive Complexity from 6 to the 0 allowed   sonarjs/cognitive-complexity
+  121:17  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed   sonarjs/cognitive-complexity
+  135:16  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+  141:16  error  Refactor this function to reduce its Cognitive Complexity from 12 to the 0 allowed  sonarjs/cognitive-complexity
+  287:35  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/inventory_view/components/node_details/overlay.tsx
+  47:11  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/inventory_view/components/node_details/tabs/logs.tsx
+  32:29  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/inventory_view/components/node_details/tabs/metrics/metrics.tsx
+   53:40  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed   sonarjs/cognitive-complexity
+  149:77  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed   sonarjs/cognitive-complexity
+  161:73  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed   sonarjs/cognitive-complexity
+  211:27  error  Refactor this function to reduce its Cognitive Complexity from 11 to the 0 allowed  sonarjs/cognitive-complexity
+  231:26  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed   sonarjs/cognitive-complexity
+  240:47  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed   sonarjs/cognitive-complexity
+  294:68  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed   sonarjs/cognitive-complexity
+  303:64  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed   sonarjs/cognitive-complexity
+  406:32  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/inventory_view/components/node_details/tabs/osquery/index.tsx
+  39:30  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/inventory_view/components/node_details/tabs/processes/index.tsx
+  32:66  error  Refactor this function to reduce its Cognitive Complexity from 5 to the 0 allowed  sonarjs/cognitive-complexity
+  40:31  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/inventory_view/components/node_details/tabs/processes/process_row.tsx
+  34:52  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  52:55  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/inventory_view/components/node_details/tabs/processes/process_row_charts.tsx
+  37:54  error  Refactor this function to reduce its Cognitive Complexity from 7 to the 0 allowed  sonarjs/cognitive-complexity
+  76:72  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  84:36  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/inventory_view/components/node_details/tabs/processes/processes_table.tsx
+   76:16  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  157:33  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed  sonarjs/cognitive-complexity
+  201:26  error  Refactor this function to reduce its Cognitive Complexity from 5 to the 0 allowed  sonarjs/cognitive-complexity
+  227:94  error  Refactor this function to reduce its Cognitive Complexity from 6 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/inventory_view/components/node_details/tabs/processes/state_badge.tsx
+  12:58  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/inventory_view/components/node_details/tabs/processes/summary_table.tsx
+  35:8   error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed  sonarjs/cognitive-complexity
+  46:60  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/inventory_view/components/node_details/tabs/properties/index.tsx
+  22:40  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed  sonarjs/cognitive-complexity
+  37:33  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  42:34  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  47:34  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/inventory_view/components/node_details/tabs/properties/table.tsx
+   37:8   error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  120:39  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/inventory_view/components/nodes_overview.tsx
+   59:11  error  Refactor this function to reduce its Cognitive Complexity from 6 to the 0 allowed  sonarjs/cognitive-complexity
+  143:23  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/inventory_view/components/search_bar.tsx
+  25:65  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/inventory_view/components/table_view.tsx
+   31:50  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+   53:18  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+   61:16  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed  sonarjs/cognitive-complexity
+   79:67  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  108:46  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  151:34  error  Refactor this function to reduce its Cognitive Complexity from 8 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/inventory_view/components/timeline/timeline.tsx
+   54:84  error  Refactor this function to reduce its Cognitive Complexity from 13 to the 0 allowed  sonarjs/cognitive-complexity
+   89:35  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed   sonarjs/cognitive-complexity
+   97:32  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed   sonarjs/cognitive-complexity
+  114:36  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed   sonarjs/cognitive-complexity
+  141:25  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+  152:40  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed   sonarjs/cognitive-complexity
+  165:16  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed   sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/inventory_view/components/waffle/conditional_tooltip.tsx
+  34:93  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  68:29  error  Refactor this function to reduce its Cognitive Complexity from 7 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/inventory_view/components/waffle/custom_field_panel.tsx
+  36:13  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/inventory_view/components/waffle/gradient_legend.tsx
+  26:53  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  39:52  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/inventory_view/components/waffle/group_name.tsx
+  22:10  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  47:70  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed  sonarjs/cognitive-complexity
+  76:31  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/inventory_view/components/waffle/group_of_nodes.tsx
+  40:4  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/inventory_view/components/waffle/interval_label.tsx
+  16:60  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/inventory_view/components/waffle/legend.tsx
+  41:84  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/inventory_view/components/waffle/legend_controls.tsx
+   67:11  error  Refactor this function to reduce its Cognitive Complexity from 5 to the 0 allowed  sonarjs/cognitive-complexity
+   73:16  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+   92:25  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  110:43  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed  sonarjs/cognitive-complexity
+  120:43  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/inventory_view/components/waffle/map.tsx
+   51:60  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed  sonarjs/cognitive-complexity
+  108:13  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/inventory_view/components/waffle/metric_control/custom_metric_form.tsx
+  63:58  error  Refactor this function to reduce its Cognitive Complexity from 16 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/inventory_view/components/waffle/metric_control/index.tsx
+  42:11  error  Refactor this function to reduce its Cognitive Complexity from 10 to the 0 allowed  sonarjs/cognitive-complexity
+  81:36  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed   sonarjs/cognitive-complexity
+  95:48  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed   sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/inventory_view/components/waffle/metric_control/metrics_context_menu.tsx
+  35:11  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  39:19  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed  sonarjs/cognitive-complexity
+  58:28  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  63:34  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/inventory_view/components/waffle/metric_control/mode_switcher.tsx
+  27:80  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/inventory_view/components/waffle/node.tsx
+   50:10  error  Refactor this function to reduce its Cognitive Complexity from 9 to the 0 allowed  sonarjs/cognitive-complexity
+  155:30  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  165:31  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  171:29  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/inventory_view/components/waffle/node_context_menu.tsx
+  40:46  error  Refactor this function to reduce its Cognitive Complexity from 13 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/inventory_view/components/waffle/stepped_gradient_legend.tsx
+  47:61  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/inventory_view/components/waffle/steps_legend.tsx
+  32:97  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/inventory_view/components/waffle/waffle_accounts_controls.tsx
+  20:54  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  35:19  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  47:8   error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/inventory_view/components/waffle/waffle_group_by_controls.tsx
+   45:10  error  Refactor this function to reduce its Cognitive Complexity from 12 to the 0 allowed  sonarjs/cognitive-complexity
+  190:47  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed   sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/inventory_view/components/waffle/waffle_region_controls.tsx
+  19:52  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  34:19  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  46:8   error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/inventory_view/components/waffle/waffle_sort_controls.tsx
+  58:37  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  67:8   error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/inventory_view/components/waffle/waffle_time_controls.tsx
+  21:67  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/inventory_view/index.tsx
+  31:32  error  Refactor this function to reduce its Cognitive Complexity from 8 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/metric_detail/components/chart_section_vis.tsx
+  47:21  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed  sonarjs/cognitive-complexity
+  56:8   error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  60:13  error  Refactor this function to reduce its Cognitive Complexity from 5 to the 0 allowed  sonarjs/cognitive-complexity
+  80:28  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/metric_detail/components/gauges_section_vis.tsx
+  33:20  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  52:21  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  60:37  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/metric_detail/components/metadata_details.tsx
+   86:48  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+   92:84  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed  sonarjs/cognitive-complexity
+  108:47  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed  sonarjs/cognitive-complexity
+  112:8   error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  116:37  error  Refactor this function to reduce its Cognitive Complexity from 6 to the 0 allowed  sonarjs/cognitive-complexity
+  131:8   error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/metric_detail/components/node_details_page.tsx
+  45:46  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed  sonarjs/cognitive-complexity
+  55:47  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/metric_detail/components/page_body.tsx
+  36:11  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/metric_detail/components/page_error.tsx
+  20:51  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/metric_detail/components/section.tsx
+  33:4   error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  37:34  error  Refactor this function to reduce its Cognitive Complexity from 6 to the 0 allowed  sonarjs/cognitive-complexity
+  65:60  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/metric_detail/components/series_chart.tsx
+  29:43  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  36:76  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed  sonarjs/cognitive-complexity
+  63:69  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/metric_detail/components/side_nav.tsx
+  17:65  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/metric_detail/components/sub_section.tsx
+  26:4   error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed  sonarjs/cognitive-complexity
+  33:60  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/metric_detail/components/time_controls.tsx
+  26:70  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  52:77  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/metric_detail/index.tsx
+  37:32  error  Refactor this function to reduce its Cognitive Complexity from 5 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/metrics_explorer/components/aggregation.tsx
+  57:9  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/metrics_explorer/components/chart.tsx
+  66:11  error  Refactor this function to reduce its Cognitive Complexity from 10 to the 0 allowed  sonarjs/cognitive-complexity
+  71:54  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+  78:36  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed   sonarjs/cognitive-complexity
+  87:28  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/metrics_explorer/components/chart_context_menu.tsx
+  46:34  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed   sonarjs/cognitive-complexity
+  59:89  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+  87:11  error  Refactor this function to reduce its Cognitive Complexity from 10 to the 0 allowed  sonarjs/cognitive-complexity
+  91:39  error  Refactor this function to reduce its Cognitive Complexity from 5 to the 0 allowed   sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/metrics_explorer/components/chart_title.tsx
+  21:47  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  26:29  error  Refactor this function to reduce its Cognitive Complexity from 5 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/metrics_explorer/components/charts.tsx
+   49:11  error  Refactor this function to reduce its Cognitive Complexity from 9 to the 0 allowed  sonarjs/cognitive-complexity
+   85:35  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  125:29  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/metrics_explorer/components/group_by.tsx
+  22:92  error  Refactor this function to reduce its Cognitive Complexity from 6 to the 0 allowed  sonarjs/cognitive-complexity
+  32:35  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  58:21  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/metrics_explorer/components/kuery_bar.tsx
+  33:10  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  49:11  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  54:16  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  60:40  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  82:65  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/metrics_explorer/components/metrics.tsx
+  35:45  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  60:19  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/metrics_explorer/components/series_chart.tsx
+  37:57  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  44:95  error  Refactor this function to reduce its Cognitive Complexity from 7 to the 0 allowed  sonarjs/cognitive-complexity
+  85:79  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/metrics_explorer/components/toolbar.tsx
+  56:11  error  Refactor this function to reduce its Cognitive Complexity from 4 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/metrics_explorer/hooks/use_metric_explorer_state.test.tsx
+  55:26  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/metrics_explorer/hooks/use_metrics_explorer_options.test.tsx
+  46:26  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/metrics_explorer/index.tsx
+  30:96  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  55:16  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  61:16  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/page_template.tsx
+  22:4  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/settings/input_fields.tsx
+  86:68  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/settings/source_configuration_form_state.tsx
+  17:10  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/pages/metrics/settings/source_configuration_settings.tsx
+  37:38  error  Refactor this function to reduce its Cognitive Complexity from 12 to the 0 allowed  sonarjs/cognitive-complexity
+  62:47  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed   sonarjs/cognitive-complexity
+  79:8   error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed   sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/test_utils/use_global_storybook_theme.tsx
+  52:53  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/utils/enzyme_helpers.tsx
+  56:31  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  68:63  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/utils/log_column_render_configuration.tsx
+  62:17  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/utils/redirect_with_query_params.tsx
+  26:42  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/utils/typed_react.tsx
+  41:14  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  47:14  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity
+  80:39  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+
+/Users/milton/dev/kibana/x-pack/plugins/infra/public/utils/url_state.tsx
+   37:10  error  Refactor this function to reduce its Cognitive Complexity from 3 to the 0 allowed  sonarjs/cognitive-complexity
+   58:78  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+   71:51  error  Refactor this function to reduce its Cognitive Complexity from 5 to the 0 allowed  sonarjs/cognitive-complexity
+   96:82  error  Refactor this function to reduce its Cognitive Complexity from 5 to the 0 allowed  sonarjs/cognitive-complexity
+  133:88  error  Refactor this function to reduce its Cognitive Complexity from 5 to the 0 allowed  sonarjs/cognitive-complexity
+  148:95  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  157:25  error  Refactor this function to reduce its Cognitive Complexity from 1 to the 0 allowed  sonarjs/cognitive-complexity
+  169:90  error  Refactor this function to reduce its Cognitive Complexity from 2 to the 0 allowed  sonarjs/cognitive-complexity

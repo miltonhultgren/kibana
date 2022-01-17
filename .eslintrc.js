@@ -1752,5 +1752,16 @@ module.exports = {
         '@kbn/eslint/no_export_all': 'error',
       },
     },
+
+    /**
+     * ON WEEK
+     */
+    {
+      files: ['x-pack/plugins/infra/{public,server,common}/**/*.{tsx,ts}'],
+      plugins: ['sonarjs'],
+      rules: {
+        'sonarjs/cognitive-complexity': ['error', 0],
+      },
+    },
   ],
 };
