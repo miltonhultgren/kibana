@@ -6,13 +6,35 @@
  */
 
 import { ImplicitCollectionOptions } from '.';
-import { Collector } from './collectors';
+import { Collector, CollectorOptions } from './collectors';
 import { Asset } from '../../../common/types_api';
+import { LOGS_INDICES, METRICS_INDICES, APM_INDICES } from '../../constants';
 
+function addRemotePrefix(prefix: string, indices: string) {
+  return indices
+    .split(',')
+    .map((index) => `${prefix}:${index}`)
+    .join(',');
+}
 export class CollectorRunner {
   private collectors: Array<{ name: string; collector: Collector }> = [];
+  private indices: CollectorOptions['indices'];
 
-  constructor(private options: ImplicitCollectionOptions) {}
+  constructor(private options: ImplicitCollectionOptions) {
+    if (options.remotePrefix) {
+      this.indices = {
+        metrics: addRemotePrefix(options.remotePrefix, METRICS_INDICES),
+        logs: addRemotePrefix(options.remotePrefix, LOGS_INDICES),
+        traces: addRemotePrefix(options.remotePrefix, APM_INDICES),
+      };
+    } else {
+      this.indices = {
+        metrics: METRICS_INDICES,
+        logs: LOGS_INDICES,
+        traces: APM_INDICES,
+      };
+    }
+  }
 
   registerCollector(name: string, collector: Collector) {
     this.collectors.push({ name, collector });
@@ -22,6 +44,7 @@ export class CollectorRunner {
     const collectorOptions = {
       client: this.options.inputClient,
       from: Date.now() - this.options.intervalMs,
+      indices: this.indices,
     };
 
     for (let i = 0; i < this.collectors.length; i++) {

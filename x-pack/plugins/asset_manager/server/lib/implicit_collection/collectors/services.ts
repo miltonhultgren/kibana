@@ -5,15 +5,18 @@
  * 2.0.
  */
 
-import { APM_INDICES } from '../../../constants';
 import { Asset } from '../../../../common/types_api';
 import { CollectorOptions } from '.';
 
 const MISSING_KEY = '__unknown__';
 
-export async function collectServices({ client, from }: CollectorOptions): Promise<Asset[]> {
+export async function collectServices({
+  client,
+  from,
+  indices,
+}: CollectorOptions): Promise<Asset[]> {
   const dsl = {
-    index: APM_INDICES,
+    index: indices.traces,
     size: 0,
     sort: [
       {

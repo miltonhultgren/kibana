@@ -10,6 +10,11 @@ import { Asset } from '../../../../common/types_api';
 export interface CollectorOptions {
   client: ElasticsearchClient;
   from: number;
+  indices: {
+    metrics: string;
+    logs: string;
+    traces: string;
+  };
 }
 
 export type Collector = (opts: CollectorOptions) => Promise<Asset[]>;

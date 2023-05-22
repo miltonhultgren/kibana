@@ -5,13 +5,12 @@
  * 2.0.
  */
 
-import { APM_INDICES, LOGS_INDICES, METRICS_INDICES } from '../../../constants';
 import { Asset } from '../../../../common/types_api';
 import { CollectorOptions } from '.';
 
-export async function collectPods({ client, from }: CollectorOptions) {
+export async function collectPods({ client, from, indices }: CollectorOptions) {
   const dsl = {
-    index: [APM_INDICES, LOGS_INDICES, METRICS_INDICES],
+    index: [indices.traces, indices.metrics, indices.logs],
     size: 1000,
     collapse: {
       field: 'kubernetes.pod.uid',

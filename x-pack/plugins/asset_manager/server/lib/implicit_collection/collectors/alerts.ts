@@ -9,8 +9,8 @@ import { Asset } from '../../../../common/types_api';
 import { CollectorOptions } from '.';
 import { collectHosts } from './hosts';
 
-export async function collectAlerts({ client, from }: CollectorOptions): Promise<Asset[]> {
-  const hosts = await collectHosts({ client, from });
+export async function collectAlerts({ client, from, indices }: CollectorOptions): Promise<Asset[]> {
+  const hosts = await collectHosts({ client, from, indices });
 
   const alerts = hosts.flatMap((host) => {
     const alertsForHost: Asset[] = [];

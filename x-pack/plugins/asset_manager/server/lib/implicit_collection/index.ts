@@ -18,6 +18,7 @@ import { CollectorRunner } from './collector_runner';
 export interface ImplicitCollectionOptions {
   inputClient: ElasticsearchClient;
   outputClient: ElasticsearchClient;
+  remotePrefix: string | false;
   intervalMs: number;
   logger: Logger;
 }

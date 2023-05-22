@@ -5,13 +5,12 @@
  * 2.0.
  */
 
-import { APM_INDICES, METRICS_INDICES, LOGS_INDICES } from '../../../constants';
 import { Asset } from '../../../../common/types_api';
 import { CollectorOptions } from '.';
 
-export async function collectHosts({ client, from }: CollectorOptions): Promise<Asset[]> {
+export async function collectHosts({ client, from, indices }: CollectorOptions): Promise<Asset[]> {
   const dsl = {
-    index: [APM_INDICES, LOGS_INDICES, METRICS_INDICES],
+    index: [indices.traces, indices.metrics, indices.logs],
     size: 1000,
     collapse: { field: 'host.hostname' },
     sort: [{ _score: 'desc' }, { '@timestamp': 'desc' }],

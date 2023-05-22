@@ -32,9 +32,14 @@ const configSchema = schema.object({
       interval: schema.duration({ defaultValue: '5m' }),
       input: schema.maybe(
         schema.object({
-          hosts: schema.string(),
-          username: schema.string(),
-          password: schema.string(),
+          client: schema.maybe(
+            schema.object({
+              hosts: schema.string(),
+              username: schema.string(),
+              password: schema.string(),
+            })
+          ),
+          remotePrefix: schema.oneOf([schema.literal(false), schema.string()]),
         })
       ),
       output: schema.maybe(
@@ -104,6 +109,7 @@ export class AssetManagerServerPlugin implements Plugin<AssetManagerServerPlugin
       this.stopImplicitCollection = startImplicitCollection({
         inputClient,
         outputClient,
+        remotePrefix: this.config.implicitCollection?.input?.remotePrefix || false,
         intervalMs: this.config.implicitCollection.interval.asMilliseconds(),
         logger: this.context.logger.get('implicit_collection'),
       });
@@ -118,11 +124,11 @@ export class AssetManagerServerPlugin implements Plugin<AssetManagerServerPlugin
     let inputClient = elasticsearch.client.asInternalUser;
     let outputClient = elasticsearch.client.asInternalUser;
 
-    if (this.config.implicitCollection?.input) {
+    if (this.config.implicitCollection?.input?.client) {
       inputClient = elasticsearch.createClient('asset_manager.implicit_collection.reader', {
-        hosts: [this.config.implicitCollection.input.hosts],
-        username: this.config.implicitCollection.input.username,
-        password: this.config.implicitCollection.input.password,
+        hosts: [this.config.implicitCollection.input.client.hosts],
+        username: this.config.implicitCollection.input.client.username,
+        password: this.config.implicitCollection.input.client.password,
       }).asInternalUser;
     }
 
