@@ -14,6 +14,7 @@ import { RedirectTo } from '../components/redirect_to';
 import { StreamListView } from '../components/stream_list_view';
 import { StreamDetailRoot } from '../components/stream_root';
 import { StreamDetailManagement } from '../components/data_management/stream_detail_management';
+import { ChangeRequestsPage } from '../components/change_requests/change_requests_page';
 
 /**
  * The array of route definitions to be used when the application
@@ -36,6 +37,10 @@ const streamsAppRoutes = {
     children: {
       '/': {
         element: <StreamListView />,
+      },
+      '/change-requests': {
+        // Should probably hide this nav link if the user doesn't have the create capability either
+        element: <ChangeRequestsPage />,
       },
       '/{key}': {
         element: (

@@ -98,18 +98,33 @@ export class ObservabilityStreamsWrapperPlugin
 
               return [
                 {
-                  label: '',
+                  label: i18n.translate('xpack.streams.streamsAppLinkTitle', {
+                    defaultMessage: 'Streams',
+                  }),
                   sortKey: 101,
                   entries: [
                     {
-                      label: i18n.translate('xpack.streams.streamsAppLinkTitle', {
+                      label: i18n.translate('xpack.streams.streamsListingLinkTitle', {
                         defaultMessage: 'Streams',
                       }),
                       app: STREAMS_APP_ID,
                       path: '/',
                       isTechnicalPreview: true,
                       matchPath(currentPath: string) {
-                        return ['/', ''].some((testPath) => currentPath.startsWith(testPath));
+                        return ['/', ''].some((testPath) => currentPath === testPath);
+                      },
+                    },
+                    {
+                      label: i18n.translate('xpack.streams.streamsChangeRequestsLinkTitle', {
+                        defaultMessage: 'Change requests',
+                      }),
+                      app: STREAMS_APP_ID,
+                      path: '/change-requests', // What if a user creates a Stream called change-requests?
+                      isTechnicalPreview: true,
+                      matchPath(currentPath: string) {
+                        return ['/change-requests'].some((testPath) =>
+                          currentPath.startsWith(testPath)
+                        );
                       },
                     },
                   ],
@@ -130,6 +145,15 @@ export class ObservabilityStreamsWrapperPlugin
       appRoute: '/app/streams',
       category: DEFAULT_APP_CATEGORIES.observability,
       order: 8001,
+      deepLinks: [
+        {
+          id: 'change_requests',
+          title: i18n.translate('xpack.streams.changeRequestsLinkTitle', {
+            defaultMessage: 'Change requests',
+          }),
+          path: '/change-requests',
+        },
+      ],
       updater$: from(startServicesPromise).pipe(
         switchMap(([_, pluginsStart]) =>
           pluginsStart.streams.status$.pipe(

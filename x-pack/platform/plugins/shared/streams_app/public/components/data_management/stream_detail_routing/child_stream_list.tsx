@@ -30,14 +30,14 @@ import {
   useStreamsRoutingSelector,
 } from './state_management/stream_routing_state_machine';
 
-function getReasonDisabledCreateButton(canManageRoutingRules: boolean, maxNestingLevel: boolean) {
+function getReasonDisabledCreateButton(canCreateRoutingRules: boolean, maxNestingLevel: boolean) {
   if (maxNestingLevel) {
     return i18n.translate('xpack.streams.streamDetailRouting.rules.maxNestingLevel', {
       defaultMessage:
         'You have reached the maximum nesting level for streams. Try to flatten your hierarchy.',
     });
   }
-  if (!canManageRoutingRules) {
+  if (!canCreateRoutingRules) {
     return i18n.translate('xpack.streams.streamDetailRouting.rules.onlySimulate', {
       defaultMessage: "You don't have sufficient privileges to create new streams, only simulate.",
     });
@@ -51,9 +51,7 @@ export function ChildStreamList({ availableStreams }: { availableStreams: string
   const { currentRuleId, definition, routing } = routingSnapshot.context;
   const canCreateRoutingRules = routingSnapshot.can({ type: 'routingRule.create' });
   const canReorderRoutingRules = routingSnapshot.can({ type: 'routingRule.reorder', routing });
-  const canManageRoutingRules = definition.privileges.manage;
   const maxNestingLevel = getSegments(definition.stream.name).length >= MAX_NESTING_LEVEL;
-  const shouldDisplayCreateButton = definition.privileges.simulate;
 
   const handlerItemDrag: DragDropContextProps['onDragEnd'] = ({ source, destination }) => {
     if (source && destination) {
@@ -84,25 +82,23 @@ export function ChildStreamList({ availableStreams }: { availableStreams: string
               defaultMessage: 'Routing rules',
             })}
           </EuiText>
-          {shouldDisplayCreateButton && (
-            <EuiFlexItem grow={false}>
-              <EuiToolTip
-                content={getReasonDisabledCreateButton(canManageRoutingRules, maxNestingLevel)}
+          <EuiFlexItem grow={false}>
+            <EuiToolTip
+              content={getReasonDisabledCreateButton(canCreateRoutingRules, maxNestingLevel)}
+            >
+              <EuiButton
+                iconType="plus"
+                size="s"
+                data-test-subj="streamsAppStreamDetailRoutingAddRuleButton"
+                onClick={createNewRule}
+                disabled={!canCreateRoutingRules || maxNestingLevel}
               >
-                <EuiButton
-                  iconType="plus"
-                  size="s"
-                  data-test-subj="streamsAppStreamDetailRoutingAddRuleButton"
-                  onClick={createNewRule}
-                  disabled={!canCreateRoutingRules || maxNestingLevel}
-                >
-                  {i18n.translate('xpack.streams.streamDetailRouting.addRule', {
-                    defaultMessage: 'Create child stream',
-                  })}
-                </EuiButton>
-              </EuiToolTip>
-            </EuiFlexItem>
-          )}
+                {i18n.translate('xpack.streams.streamDetailRouting.addRule', {
+                  defaultMessage: 'Create child stream',
+                })}
+              </EuiButton>
+            </EuiToolTip>
+          </EuiFlexItem>
         </EuiFlexGroup>
       </EuiFlexItem>
       <EuiFlexGroup

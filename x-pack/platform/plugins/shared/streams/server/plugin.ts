@@ -147,6 +147,42 @@ export class StreamsPlugin
           ui: [STREAMS_UI_PRIVILEGES.show],
         },
       },
+      subFeatures: [
+        {
+          name: i18n.translate('xpack.streams.featureRegistry.streamsChangeRequests', {
+            defaultMessage: 'Change requests',
+          }),
+          privilegeGroups: [
+            {
+              groupType: 'independent',
+              privileges: [
+                {
+                  id: 'streams_create_change_requests',
+                  name: 'Create Change requests',
+                  includeIn: 'all',
+                  api: [plugins.changeRequests.createPrivilege.api.create('streams')],
+                  ui: [plugins.changeRequests.createPrivilege.ui.create('streams')],
+                  savedObject: {
+                    all: [],
+                    read: [],
+                  },
+                },
+                {
+                  id: 'streams_manage_change_requests',
+                  name: 'Manage Change requests',
+                  includeIn: 'all',
+                  api: [plugins.changeRequests.createPrivilege.api.manage('streams')],
+                  ui: [plugins.changeRequests.createPrivilege.ui.manage('streams')],
+                  savedObject: {
+                    all: [],
+                    read: [],
+                  },
+                },
+              ],
+            },
+          ],
+        },
+      ],
     });
 
     core.pricing.registerProductFeatures(STREAMS_TIERED_FEATURES);

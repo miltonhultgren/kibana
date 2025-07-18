@@ -8,6 +8,7 @@ import {
   MachineImplementationsFrom,
   assign,
   and,
+  or,
   enqueueActions,
   setup,
   ActorRefFrom,
@@ -23,10 +24,11 @@ import {
 } from './types';
 import {
   createUpsertStreamActor,
-  createStreamFailureNofitier,
-  createStreamSuccessNofitier,
+  createStreamFailureNotifier,
+  createStreamSuccessNotifier,
   createForkStreamActor,
   createDeleteStreamActor,
+  createSuggestStreamActor,
 } from './stream_actors';
 import { routingConverter } from '../../utils';
 import { RoutingDefinitionWithUIAttributes } from '../../types';
@@ -47,12 +49,13 @@ export const streamRoutingMachine = setup({
   actors: {
     deleteStream: getPlaceholderFor(createDeleteStreamActor),
     forkStream: getPlaceholderFor(createForkStreamActor),
+    suggestStream: getPlaceholderFor(createSuggestStreamActor),
     upsertStream: getPlaceholderFor(createUpsertStreamActor),
     routingSamplesMachine: getPlaceholderFor(() => routingSamplesMachine),
   },
   actions: {
-    notifyStreamSuccess: getPlaceholderFor(createStreamSuccessNofitier),
-    notifyStreamFailure: getPlaceholderFor(createStreamFailureNofitier),
+    notifyStreamSuccess: getPlaceholderFor(createStreamSuccessNotifier),
+    notifyStreamFailure: getPlaceholderFor(createStreamFailureNotifier),
     refreshDefinition: () => {},
     addNewRoutingRule: assign(({ context }) => {
       const newRule = routingConverter.toUIDefinition({
@@ -105,12 +108,14 @@ export const streamRoutingMachine = setup({
     hasMultipleRoutingRules: ({ context }) => context.routing.length > 1,
     hasManagePrivileges: ({ context }) => context.definition.privileges.manage,
     hasSimulatePrivileges: ({ context }) => context.definition.privileges.simulate,
+    hasSuggestPrivileges: () => false, // Injected by provided configuration
     isAlreadyEditing: ({ context }, params: { id: string }) => context.currentRuleId === params.id,
     isValidRouting: ({ context }) =>
       isSchema(routingDefinitionListSchema, context.routing.map(routingConverter.toAPIDefinition)),
+    canCreateRule: or(['hasSimulatePrivileges', 'hasSuggestPrivileges']),
   },
 }).createMachine({
-  /** @xstate-layout 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-R0K-PMf0T61RRZmvyVAlK2ayZ8LAIrfuObm2ksjQDUqrhm5iruKhTGvRKA+EaICaScYHj1une6cZ9tc1qzuPYQtWqS2-MAb8FQ1QAZvp-loTNoyPFXomppUqsUTQAw1IyTpLQCR5mVAogEeZ3w+C-WAFh3jhSeMQwI1gv6irqiaWRRQLhfkNBiXIIhq1+hbKcISPoCGkNZJnRwi9E7yCYcQHcdCclfApmkkaMDcgnEdHUu4DFGKnxdDOX4IAA */
+  /** @xstate-layout N4IgpgJg5mDOIC5QCcD2BXALgSwHZQGVNkwBDAWwDo9sdSAbbALzygGIBtABgF1FQADqli1sqXPxAAPRACZZATkoA2AIwAWABwL1sgKybZG1bIA0IAJ6IAzKr2V1XLgs3WA7Jq7uFb5QF8-czQsViISCkpwiAs2WGIyKhIAYzBsADdIbj4kECERHHFJGQQucysSgKCMHHwwhMiyaOoIejA2YJqoACV0Vsok8MwwLMk80UKc4tLLRC5KkA7Q+Iioi2bW9urWHr7IWhGcsYKJScRNPXVKa1tFN1VbHTcyxABaeUofZT03W3VVT+sXnmi1qy0SjTW2BabRB3V6YAaqGQEDAyAOgmE4xOoGK6mUXBU1lcXDcelUmjcbnU6ieMwQmk0VyJ7n0XGUfz+emBW1B4XBpCaAzInQAcmAAO47BFJAAWpHwrE2IXwUv68pS9HRuUxxyKiB0ykoXAuzmsehcml0zwQylJlDJtt0Bi4NIU3OVhDBDQFayFpFFEtVsvlUEVsKDcvww14ox1Ymx0kQ92USms6gU7gpsi0yk01tzsiu-yJRnunhM7s6dRWEP6g1YYsl8P6kdD+CVnVVe0wWqO8b1CFU7MLej0skMVNt+lU1rcClUDj0X1cZN0KeslaWfO9gvr+EbEZDYZ5cL6ADMkQBrXtxiY4pMu6wqRzWBRvn7KNPqa2qJyXXxcIY5ImCmGabry9SrHWwoNoGzbBgq7bhs2sDoFAMBxDe+T9qcCDyIy5Kjnor7KOO6juMo1ovKoPyUJ4riaLaNFjsy4GetuUF+gGTbnleioQOICJ4GkqCXgiF7IJe1bkAAgkkmBIlhWIDj8C6kVwsiUlSJKKDOdJUqmCjfIobIpt8qhsdJO6+nuUAHs2EmXoqqJoMglACPQ-oSVQjnSXJClojGhy3gmxS-j4Dg-FozG2KoJjWto9jfJ8o40jSlqWV6nG2fZfSoehcCdGwAm4EJuAiWJlD5RhmB+fJilBRi2F3omCAvNYsgEgyc4li6tqMT+XALrIgK5oxniAp1siZRxtZcbBPEItVhXOcgrnuZ5mDeVVaE1XVAVKbquHtRoHyvgonXXBSNFpta05Gs4pGdec2YXVygQLCeVlQd22zwa2x4ekGgzRtkTXKbh9xLpQdweA8cWWhmP4mP+hjGhcc6eORM2QbWv0qv9R5ISeQbqmAmqNdqzWhWcI10YC6afqSdwuD+JoOCmU2-mOujTR9sLfXjECiATfQIW27DIWLrag7G1MDjRzhGuoegacojo0kSP79Q4NJGI4Hhju9VQeoLPqUPjp7SgDxNA823aHTh96DmOC5-MSjFOg8P6xQ4PgKBplKAWabg4zW5uW4eiGSyT9vCz2qhg1TEPOzReJGrma7Zmab0-uRSjmkN5F3MWFJh-yTSR4T0cdn9fQkOQqAZI7LVhTRhqOIxFGcyr1h59mKiyCmOm6CrGX819WVCyLVstkTMd23lpDN5Tfat0m-yGvhOjjgYujWJRdLtwSv6MUNJJviYocT6bU8R-HdcIg3TeP8VgnUOVokIiirRDPtDVJzXjTBAIc6KaA0K+dKahmI-mzJcY00Di4uGzOXayFsH6iyfmARuaRX4uSRBtLySIqA-zAH-ME-kAFyxTq1EwihIpEURlodMeYj7EQ7sSNk8gRoGD5ibKsd9K4YNnugAQEB-SvxKmVCqCJRGwFRLVCh9VAqAJCgOUBRgfh70cNmKk34j5uH0JQOwFwfBDi0DoTQqCfrCNVKI8RnZ4RsHwW5DyRDkBUDkQo-+KjqFHVTvhOicUaRTiHPIbWaZ7RmnMuyJcv51DWNrCQJEKJkCP1gIiZEqJAaOPrmAFJqIW7AOTIWeQgJSQulcOmO6xoCRUhuuae4Q4LI3wEbNc2ySslpMwRkzpqScmPzVLgDURSByq0ZOmdMxEFBfFSnoGpNEHrZzTJ1SciSOn5K6ekzJ-Tba5KWsvWWwV5aQ1qSodkb48QuF0DMu61w3AqDfBpIk5JPwunWU0Pp2SemUHsRIiCFA36lQ-jI35Ah5HIEUXyShvjjk0NxHTc0WhDE8LNBAu6RhDT-D+BmdkbhjQfLWF87pVsMl-LaQkZxa0CFuK2sQsFEKoUJBhaMyGv4CSrIpC4O41IMVK3nC8y0dx3ABA+rgVAKJ4A5AFmCPxTtWovDHmdN8l0iSw1unSF4+IFyAktLcVcPg+GfVvtuGgdBGAsHwHK9eeEhx0XVqWWGWMkZ0hGoWDQhcBXAU-MbY1FLw7RGtcAxVv5lUXS8Gqm6+jygvDJE+eiOKh6aQuoS9YYAg0Dn0EoNkl9tATQdfMuklpGSkUMfcEi4Dr78K3Ljc2819xwVaBm46B9CwZhVRG66UUqLeCuIBci0yaLzjdK0mtAabIwQbYtOe0dm0BPOBzeQc5szjg8Hpco4DLjkViloTwrtU31rso28SfErVwv8a1UkjJjRaE0voTw44EoZntEuL8+gzSuBHdWgFFcJ3-KPdO5acRWBztatMcocUnAw3xEBcBQ83wblHT+tBVcm3nvlcUFMDyVYXUMTnH4Chka+EigOz2pILpGple0oRM8o4S1A2FJ6Vxl0GF8CrbMrCIPmifJAoy5pbSASrX6sdv70G0ebM-XBmCGOIFJIWOG0Di3aWjUmWwBIfDUi4V4bQLTv3sVrTR-ZYKHGPxkwgKk9gcN3vw6+H8H4VCASNvoLRWhU3EvSWZsyMMqS+BekNTSfcj4zKfNmcknUjLZneUh-T46dnfNJXFklZn7heHtCBRQLhXxpkPuUfW2GvjcoDqaAl0WzafM2bshL5KRNmapE+SkIS-NX0C7l1ZdEA7uA6h1OcFxRV+CAA */
   id: 'routingStream',
   context: ({ input }) => ({
     currentRuleId: null,
@@ -141,7 +146,7 @@ export const streamRoutingMachine = setup({
           id: 'idle',
           on: {
             'routingRule.create': {
-              guard: 'hasSimulatePrivileges',
+              guard: 'canCreateRule',
               target: 'creatingNewRule',
             },
             'routingRule.edit': {
@@ -198,6 +203,10 @@ export const streamRoutingMachine = setup({
                   guard: 'canForkStream',
                   target: 'forking',
                 },
+                'routingRule.suggest': {
+                  guard: 'hasSuggestPrivileges',
+                  target: 'suggesting',
+                },
               },
             },
             forking: {
@@ -216,6 +225,28 @@ export const streamRoutingMachine = setup({
                 onDone: {
                   target: '#idle',
                   actions: [{ type: 'refreshDefinition' }],
+                },
+                onError: {
+                  target: 'changing',
+                  actions: [{ type: 'notifyStreamFailure' }],
+                },
+              },
+            },
+            suggesting: {
+              invoke: {
+                id: 'suggestStreamActor',
+                src: 'suggestStream',
+                input: ({ context }) => {
+                  const currentRoutingRule = selectCurrentRule(context);
+
+                  return {
+                    definition: context.definition,
+                    if: currentRoutingRule.if,
+                    destination: currentRoutingRule.destination,
+                  };
+                },
+                onDone: {
+                  target: '#idle',
                 },
                 onError: {
                   target: 'changing',
@@ -346,14 +377,20 @@ export const streamRoutingMachine = setup({
 export const createStreamRoutingMachineImplementations = ({
   refreshDefinition,
   streamsRepositoryClient,
+  changeRequestsRepositoryClient,
   core,
   data,
   timeState$,
-  forkSuccessNofitier,
+  forkSuccessNotifier,
+  suggestSuccessNotifier,
 }: StreamRoutingServiceDependencies): MachineImplementationsFrom<typeof streamRoutingMachine> => ({
   actors: {
     deleteStream: createDeleteStreamActor({ streamsRepositoryClient }),
-    forkStream: createForkStreamActor({ streamsRepositoryClient, forkSuccessNofitier }),
+    forkStream: createForkStreamActor({ streamsRepositoryClient, forkSuccessNotifier }),
+    suggestStream: createSuggestStreamActor({
+      changeRequestsRepositoryClient,
+      suggestSuccessNotifier,
+    }),
     upsertStream: createUpsertStreamActor({ streamsRepositoryClient }),
     routingSamplesMachine: routingSamplesMachine.provide(
       createRoutingSamplesMachineImplementations({
@@ -364,11 +401,15 @@ export const createStreamRoutingMachineImplementations = ({
   },
   actions: {
     refreshDefinition,
-    notifyStreamSuccess: createStreamSuccessNofitier({
+    notifyStreamSuccess: createStreamSuccessNotifier({
       toasts: core.notifications.toasts,
     }),
-    notifyStreamFailure: createStreamFailureNofitier({
+    notifyStreamFailure: createStreamFailureNotifier({
       toasts: core.notifications.toasts,
     }),
+  },
+  guards: {
+    hasSuggestPrivileges: () =>
+      core.application.capabilities.streams.create_streams_change_requests as boolean,
   },
 });

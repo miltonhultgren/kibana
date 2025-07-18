@@ -7,6 +7,7 @@
 
 import { i18n } from '@kbn/i18n';
 import type { NavigationTreeDefinition } from '@kbn/core-chrome-browser';
+import { STREAMS_APP_ID } from '@kbn/deeplinks-observability/constants';
 
 export const createNavigationTree = ({
   streamsAvailable,
@@ -87,18 +88,50 @@ export const createNavigationTree = ({
           ...(streamsAvailable
             ? [
                 {
+                  id: STREAMS_APP_ID,
                   link: 'streams' as const,
+                  renderAs: 'panelOpener' as const,
                   withBadge: true,
                   badgeOptions: {
                     icon: 'beaker',
                     tooltip: i18n.translate(
-                      'xpack.serverlessObservability.nav.streamsBadgeTooltip',
+                      'xpack.serverlessObservability.obltNav.streamsBadgeTooltip',
                       {
                         defaultMessage:
                           'This functionality is experimental and not supported. It may change or be removed at any time.',
                       }
                     ),
                   },
+                  children: [
+                    {
+                      link: 'streams' as const,
+                      withBadge: true,
+                      badgeOptions: {
+                        icon: 'beaker',
+                        tooltip: i18n.translate(
+                          'xpack.serverlessObservability.obltNav.streamsBadgeTooltip',
+                          {
+                            defaultMessage:
+                              'This functionality is experimental and not supported. It may change or be removed at any time.',
+                          }
+                        ),
+                      },
+                    },
+                    {
+                      link: 'streams:change_requests' as const,
+                      withBadge: true,
+                      badgeOptions: {
+                        icon: 'beaker',
+                        tooltip: i18n.translate(
+                          'xpack.serverlessObservability.nav.streamsBadgeTooltip',
+                          {
+                            defaultMessage:
+                              'This functionality is experimental and not supported. It may change or be removed at any time.',
+                          }
+                        ),
+                      },
+                    },
+                  ],
                 },
               ]
             : []),

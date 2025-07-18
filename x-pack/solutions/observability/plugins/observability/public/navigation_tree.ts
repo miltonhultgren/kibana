@@ -9,6 +9,7 @@ import type { NavigationTreeDefinition } from '@kbn/core-chrome-browser';
 import type { AddSolutionNavigationArg } from '@kbn/navigation-plugin/public';
 import { map, of } from 'rxjs';
 import type { ObservabilityPublicPluginsStart } from './plugin';
+import { STREAMS_APP_ID } from '@kbn/deeplinks-observability/constants';
 
 const title = i18n.translate(
   'xpack.observability.obltNav.headerSolutionSwitcher.obltSolutionTitle',
@@ -72,7 +73,9 @@ function createNavTree({ streamsAvailable }: { streamsAvailable?: boolean }) {
           ...(streamsAvailable
             ? [
                 {
+                  id: STREAMS_APP_ID,
                   link: 'streams' as const,
+                  renderAs: 'panelOpener' as const,
                   withBadge: true,
                   badgeOptions: {
                     icon: 'beaker',
@@ -81,6 +84,30 @@ function createNavTree({ streamsAvailable }: { streamsAvailable?: boolean }) {
                         'This functionality is experimental and not supported. It may change or be removed at any time.',
                     }),
                   },
+                  children: [
+                    {
+                      link: 'streams' as const,
+                      withBadge: true,
+                      badgeOptions: {
+                        icon: 'beaker',
+                        tooltip: i18n.translate('xpack.observability.obltNav.streamsBadgeTooltip', {
+                          defaultMessage:
+                            'This functionality is experimental and not supported. It may change or be removed at any time.',
+                        }),
+                      },
+                    },
+                    {
+                      link: 'streams:change_requests' as const,
+                      withBadge: true,
+                      badgeOptions: {
+                        icon: 'beaker',
+                        tooltip: i18n.translate('xpack.observability.nav.streamsBadgeTooltip', {
+                          defaultMessage:
+                            'This functionality is experimental and not supported. It may change or be removed at any time.',
+                        }),
+                      },
+                    },
+                  ],
                 },
               ]
             : []),

@@ -60,10 +60,8 @@ export interface ForkStreamInput {
 }
 export function createForkStreamActor({
   streamsRepositoryClient,
-  forkSuccessNofitier,
-}: Pick<StreamRoutingServiceDependencies, 'streamsRepositoryClient'> & {
-  forkSuccessNofitier: (streamName: string) => void;
-}) {
+  forkSuccessNotifier,
+}: Pick<StreamRoutingServiceDependencies, 'streamsRepositoryClient' | 'forkSuccessNotifier'>) {
   return fromPromise<ForkStreamResponse, ForkStreamInput>(async ({ input, signal }) => {
     const response = await streamsRepositoryClient.fetch(
       'POST /api/streams/{name}/_fork 2023-10-31',
@@ -83,9 +81,59 @@ export function createForkStreamActor({
       }
     );
 
-    forkSuccessNofitier(input.destination);
+    forkSuccessNotifier(input.destination);
 
     return response;
+  });
+}
+
+export function createSuggestStreamActor({
+  changeRequestsRepositoryClient,
+  suggestSuccessNotifier,
+}: Pick<
+  StreamRoutingServiceDependencies,
+  'changeRequestsRepositoryClient' | 'suggestSuccessNotifier'
+>) {
+  return fromPromise<any, ForkStreamInput>(async ({ input, signal }) => {
+    await changeRequestsRepositoryClient.fetch('POST /internal/change_requests/change_requests', {
+      signal,
+      params: {
+        body: {
+          // Need a UI way to input these things
+          title: `Fork stream: ${input.definition.stream.name} to ${input.destination}`,
+          description: 'I think it would be neat',
+          urgency: 'medium',
+          actions: [
+            {
+              request: {
+                method: 'post',
+                endpoint: `/api/streams/${input.definition.stream.name}/_fork`, // Ideally I can pass this as path params instead
+                version: '2023-10-31',
+                body: {
+                  if: input.if,
+                  stream: {
+                    name: input.destination,
+                  },
+                },
+              },
+              domain: 'streams',
+              label: 'Fork stream',
+              summary:
+                'This creates a child stream from the parent stream and routes data based on a condition',
+              requiredPrivileges: {
+                // This is a placeholder, the actual privileges will be added later
+                elasticsearch: {
+                  cluster: ['manage_ingest_pipelines'],
+                  index: {},
+                },
+              },
+            },
+          ],
+        },
+      },
+    });
+
+    suggestSuccessNotifier();
   });
 }
 
@@ -117,7 +165,7 @@ export function createDeleteStreamActor({
  * Notifier factories
  */
 
-export const createStreamSuccessNofitier =
+export const createStreamSuccessNotifier =
   ({ toasts }: { toasts: IToasts }) =>
   () => {
     toasts.addSuccess({
@@ -128,7 +176,7 @@ export const createStreamSuccessNofitier =
     });
   };
 
-export const createStreamFailureNofitier =
+export const createStreamFailureNotifier =
   ({ toasts }: { toasts: IToasts }) =>
   (params: { event: unknown }) => {
     const event = params.event as ErrorActorEvent<esErrors.ResponseError, string>;

@@ -46,6 +46,7 @@ export function StreamDetailRouting(props: StreamDetailRoutingProps) {
   const {
     data,
     streams: { streamsRepositoryClient },
+    changeRequests: { changeRequestsRepositoryClient },
   } = dependencies.start;
 
   const { timeState$ } = useTimefilter();
@@ -58,7 +59,9 @@ export function StreamDetailRouting(props: StreamDetailRoutingProps) {
       data={data}
       timeState$={timeState$}
       streamsRepositoryClient={streamsRepositoryClient}
-      forkSuccessNofitier={createForkSuccessNofitier({ core, router })}
+      changeRequestsRepositoryClient={changeRequestsRepositoryClient}
+      forkSuccessNotifier={createForkSuccessNotifier({ core, router })}
+      suggestSuccessNotifier={createSuggestSuccessNotifier({ core, router })}
     >
       <StreamDetailRoutingImpl />
     </StreamRoutingContextProvider>
@@ -185,7 +188,7 @@ export function StreamDetailRoutingImpl() {
   );
 }
 
-const createForkSuccessNofitier =
+const createForkSuccessNotifier =
   ({ core, router }: { core: CoreStart; router: StatefulStreamsAppRouter }) =>
   (streamName: string) =>
     core.notifications.toasts.addSuccess({
@@ -208,6 +211,31 @@ const createForkSuccessNofitier =
             >
               {i18n.translate('xpack.streams.streamDetailRouting.view', {
                 defaultMessage: 'Open stream in new tab',
+              })}
+            </EuiButton>
+          </EuiFlexItem>
+        </EuiFlexGroup>,
+        core
+      ),
+    });
+
+const createSuggestSuccessNotifier =
+  ({ core, router }: { core: CoreStart; router: StatefulStreamsAppRouter }) =>
+  () =>
+    core.notifications.toasts.addSuccess({
+      title: i18n.translate('xpack.streams.streamDetailRouting.suggested', {
+        defaultMessage: 'Change request submitted',
+      }),
+      text: toMountPoint(
+        <EuiFlexGroup justifyContent="flexEnd" gutterSize="s">
+          <EuiFlexItem grow={false}>
+            <EuiButton
+              data-test-subj="streamsAppViewSuggestionsButton"
+              size="s"
+              href={router.link('/change-requests')}
+            >
+              {i18n.translate('xpack.streams.streamDetailRouting.viewSuggestions', {
+                defaultMessage: 'View suggestions',
               })}
             </EuiButton>
           </EuiFlexItem>

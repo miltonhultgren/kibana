@@ -26,7 +26,8 @@
       "share",
       "streams",
       "unifiedSearch",
-      "unifiedDocViewer"
+      "unifiedDocViewer",
+      "changeRequests"
     ],
     "optionalPlugins": ["observabilityAIAssistant"],
     "requiredBundles": ["kibanaReact", "kibanaUtils", "observabilityAIAssistant"]

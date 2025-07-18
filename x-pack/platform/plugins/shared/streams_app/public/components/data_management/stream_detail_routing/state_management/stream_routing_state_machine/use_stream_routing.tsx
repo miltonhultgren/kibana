@@ -55,6 +55,9 @@ export const useStreamRoutingEvents = () => {
       forkStream: () => {
         service.send({ type: 'routingRule.fork' });
       },
+      suggestStream: () => {
+        service.send({ type: 'routingRule.suggest' });
+      },
       saveChanges: () => {
         service.send({ type: 'routingRule.save' });
       },

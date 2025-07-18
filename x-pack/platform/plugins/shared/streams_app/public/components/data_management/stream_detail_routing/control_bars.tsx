@@ -85,6 +85,25 @@ export const EditRoutingRuleControls = ({
   );
 };
 
+export const SuggestRoutingRuleControls = () => {
+  const routingSnapshot = useStreamsRoutingSelector((snapshot) => snapshot);
+  const { cancelChanges, suggestStream } = useStreamRoutingEvents();
+
+  const isSuggesting = routingSnapshot.matches({ ready: { creatingNewRule: 'suggesting' } });
+  const canSuggestRouting = routingSnapshot.can({ type: 'routingRule.suggest' });
+
+  return (
+    <EuiFlexGroup justifyContent="flexEnd" alignItems="center" wrap responsive={false}>
+      <CancelButton isDisabled={isSuggesting} onClick={cancelChanges} />
+      <SuggestButton
+        isLoading={isSuggesting}
+        isDisabled={!canSuggestRouting}
+        onClick={suggestStream}
+      />
+    </EuiFlexGroup>
+  );
+};
+
 const RemoveButton = ({
   isDisabled,
   onDelete,
@@ -128,6 +147,14 @@ const SaveButton = (props: EuiButtonPropsForButton) => (
   <EuiButton data-test-subj="streamsAppStreamDetailRoutingSaveButton" {...props}>
     {i18n.translate('xpack.streams.streamDetailRouting.add', {
       defaultMessage: 'Save',
+    })}
+  </EuiButton>
+);
+
+const SuggestButton = (props: EuiButtonPropsForButton) => (
+  <EuiButton data-test-subj="streamsAppStreamDetailRoutingSuggestButton" {...props}>
+    {i18n.translate('xpack.streams.streamDetailRouting.suggest', {
+      defaultMessage: 'Suggest',
     })}
   </EuiButton>
 );

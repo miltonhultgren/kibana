@@ -10,12 +10,15 @@ import { StreamsRepositoryClient } from '@kbn/streams-plugin/public/api';
 import { Streams } from '@kbn/streams-schema';
 import { DataPublicPluginStart } from '@kbn/data-plugin/public';
 import { TimefilterHook } from '@kbn/data-plugin/public/query/timefilter/use_timefilter';
+import { ChangeRequestsRepositoryClient } from '@kbn/change-requests-plugin/public';
 import { RoutingDefinitionWithUIAttributes } from '../../types';
 
 export interface StreamRoutingServiceDependencies {
-  forkSuccessNofitier: (streamName: string) => void;
+  forkSuccessNotifier: (streamName: string) => void;
+  suggestSuccessNotifier: () => void;
   refreshDefinition: () => void;
   streamsRepositoryClient: StreamsRepositoryClient;
+  changeRequestsRepositoryClient: ChangeRequestsRepositoryClient;
   timeState$: TimefilterHook['timeState$'];
   core: CoreStart;
   data: DataPublicPluginStart;
@@ -39,6 +42,7 @@ export type StreamRoutingEvent =
   | { type: 'routingRule.create' }
   | { type: 'routingRule.edit'; id: string }
   | { type: 'routingRule.fork' }
+  | { type: 'routingRule.suggest' }
   | { type: 'routingRule.reorder'; routing: RoutingDefinitionWithUIAttributes[] }
   | { type: 'routingRule.remove' }
   | { type: 'routingRule.save' };

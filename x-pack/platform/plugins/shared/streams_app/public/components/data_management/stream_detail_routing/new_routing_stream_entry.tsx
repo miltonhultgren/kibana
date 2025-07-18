@@ -9,7 +9,7 @@ import React, { useEffect, useRef } from 'react';
 import { EuiPanel, EuiFlexGroup, EuiFormRow, EuiFieldText } from '@elastic/eui';
 import { i18n } from '@kbn/i18n';
 import { RoutingConditionEditor } from '../condition_editor';
-import { AddRoutingRuleControls } from './control_bars';
+import { AddRoutingRuleControls, SuggestRoutingRuleControls } from './control_bars';
 import {
   useStreamRoutingEvents,
   useStreamsRoutingSelector,
@@ -21,6 +21,9 @@ export function NewRoutingStreamEntry() {
 
   const { changeRule } = useStreamRoutingEvents();
   const currentRule = useStreamsRoutingSelector((snapshot) => selectCurrentRule(snapshot.context));
+  const canForkRule = useStreamsRoutingSelector((snapshot) =>
+    snapshot.can({ type: 'routingRule.fork' })
+  );
 
   useEffect(() => {
     if (panelRef.current) {
@@ -51,7 +54,7 @@ export function NewRoutingStreamEntry() {
             condition={currentRule.if}
             onConditionChange={(condition) => changeRule({ if: condition })}
           />
-          <AddRoutingRuleControls />
+          {canForkRule ? <AddRoutingRuleControls /> : <SuggestRoutingRuleControls />}
         </EuiFlexGroup>
       </EuiPanel>
     </div>
