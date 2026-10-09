@@ -19,6 +19,7 @@ import {
   createMockToolContext,
   createSignificantEventsServer,
   invokeHandler,
+  mockSourcesClient,
   type NightshiftFeaturePrivilege,
 } from '../../utils/test_helpers';
 
@@ -58,7 +59,7 @@ describe('ki_search tool', () => {
     expect(
       tool.schema.safeParse({
         kind: ['query'],
-        stream_names: ['logs.test'],
+        slugs: ['logs.test'],
         query_types: ['match'],
         query_ids: ['query-1'],
         rule_ids: ['rule-1'],
@@ -115,7 +116,11 @@ describe('ki_search tool', () => {
     (assertSignificantEventsAccess as jest.Mock).mockResolvedValue(undefined);
     const getKnowledgeIndicatorClient = jest.fn();
     const getScopedClients = jest.fn(async () => {
-      return { licensing: {}, getKnowledgeIndicatorClient } as unknown as RouteHandlerScopedClients;
+      return {
+        licensing: {},
+        sourcesClient: mockSourcesClient([]),
+        getKnowledgeIndicatorClient,
+      } as unknown as RouteHandlerScopedClients;
     }) as unknown as jest.MockedFunction<GetScopedClients>;
     const tool = createSearchKnowledgeIndicatorsTool({
       getScopedClients,

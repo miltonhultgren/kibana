@@ -12,6 +12,7 @@ import {
   createMockToolContext,
   createSignificantEventsServer,
   invokeHandler,
+  mockSourcesClient,
 } from '../../utils/test_helpers';
 import {
   createFeatureSimilaritySearchTool,
@@ -38,7 +39,7 @@ describe('ki_feature_similarity_search tool', () => {
     const getScopedClients = jest.fn(async () => {
       return {
         licensing: {},
-        streamsClient: { getStream: jest.fn().mockResolvedValue({ name: 'logs.test' }) },
+        sourcesClient: mockSourcesClient(['logs.test']),
         getKnowledgeIndicatorClient: jest.fn().mockResolvedValue({ findFeatures }),
       } as unknown as RouteHandlerScopedClients;
     }) as unknown as jest.MockedFunction<GetScopedClients>;
@@ -71,7 +72,7 @@ describe('ki_feature_similarity_search tool', () => {
     );
     expect(
       tool.schema.safeParse({
-        stream_name: 'logs.test',
+        slug: 'logs.test',
         candidates: [
           {
             candidate_id: 'okta-sdk',
@@ -84,7 +85,7 @@ describe('ki_feature_similarity_search tool', () => {
     ).toBe(true);
     expect(
       tool.schema.safeParse({
-        stream_name: 'logs.test',
+        slug: 'logs.test',
         candidates: [
           {
             candidate_id: 'okta-sdk',
@@ -114,7 +115,7 @@ describe('ki_feature_similarity_search tool', () => {
     const result = await invokeHandler(
       tool,
       {
-        stream_name: 'logs.test',
+        slug: 'logs.test',
         candidates: [
           {
             candidate_id: 'tech-x',
@@ -149,6 +150,9 @@ describe('ki_feature_similarity_search tool', () => {
           features: [
             { id: 'tech-0', title: 'Tech 0', description: 'Technology 0', confidence: 90 },
           ],
+          slug: 'logs.test',
+          title: 'logs.test',
+          view_name: '$.nightshift.sources.default.logs.test',
         },
       },
       {
@@ -158,6 +162,9 @@ describe('ki_feature_similarity_search tool', () => {
           features: [
             { id: 'tech-0', title: 'Tech 0', description: 'Technology 0', confidence: 90 },
           ],
+          slug: 'logs.test',
+          title: 'logs.test',
+          view_name: '$.nightshift.sources.default.logs.test',
         },
       },
     ]);
@@ -169,7 +176,7 @@ describe('ki_feature_similarity_search tool', () => {
     const result = await invokeHandler(
       tool,
       {
-        stream_name: 'logs.test',
+        slug: 'logs.test',
         candidates: [
           {
             candidate_id: 'okta',
@@ -188,7 +195,14 @@ describe('ki_feature_similarity_search tool', () => {
     expect(result.results).toEqual([
       {
         type: 'other',
-        data: { candidate_id: 'okta', features: [], error: 'semantic unavailable' },
+        data: {
+          candidate_id: 'okta',
+          features: [],
+          error: 'semantic unavailable',
+          slug: 'logs.test',
+          title: 'logs.test',
+          view_name: '$.nightshift.sources.default.logs.test',
+        },
       },
     ]);
   });
@@ -203,7 +217,7 @@ describe('ki_feature_similarity_search tool', () => {
     const result = await invokeHandler(
       tool,
       {
-        stream_name: 'logs.test',
+        slug: 'logs.test',
         candidates: [
           {
             candidate_id: 'okta-sdk',

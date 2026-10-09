@@ -490,7 +490,7 @@ export class NightshiftInvestigationsClient {
     title,
     trigger_type,
     message,
-    stream_names,
+    source_ids,
     connector_id,
     concurrency_key,
     context = {},
@@ -568,7 +568,7 @@ export class NightshiftInvestigationsClient {
     const inputs = {
       message: prepared.message,
       title,
-      stream_names: stream_names ?? [],
+      ...(source_ids?.length ? { source_ids } : {}),
       ...(connector_id?.trim() ? { connector_id: resolvedConnectorId } : {}),
       ...(concurrency_key ? { concurrency_key } : {}),
       context: {
