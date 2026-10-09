@@ -9,15 +9,21 @@ import {
   COMPUTED_FEATURE_TYPES,
   INFERRED_FEATURE_TYPES,
   LOG_SAMPLES_FEATURE_TYPE,
+  METRIC_CATALOGUE_FEATURE_TYPES,
 } from '@kbn/significant-events-schema';
 import { toFeatureForLlmContext } from '../../features/tool';
 
 /**
  * Feature types withheld from query generation. `log_samples` is redundant here
  * (covered by `dataset_analysis` and `log_patterns`) but large, so query
- * generation drops it while other consumers keep it.
+ * generation drops it while other consumers keep it. Metric catalogue types are
+ * withheld until metric query generation exists; the logs query agent must not
+ * turn them into log rules.
  */
-export const QUERY_GENERATION_EXCLUDED_FEATURE_TYPES = [LOG_SAMPLES_FEATURE_TYPE] as const;
+export const QUERY_GENERATION_EXCLUDED_FEATURE_TYPES = [
+  LOG_SAMPLES_FEATURE_TYPE,
+  ...METRIC_CATALOGUE_FEATURE_TYPES,
+] as const;
 
 const ALL_FEATURE_TOOL_TYPES = [...INFERRED_FEATURE_TYPES, ...COMPUTED_FEATURE_TYPES] as const;
 

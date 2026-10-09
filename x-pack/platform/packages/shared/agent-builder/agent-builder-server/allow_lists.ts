@@ -199,6 +199,7 @@ export const AGENT_BUILDER_AGENT_TYPES = [
   `${internalNamespaces.platformSignificantEvents}.discovery-type`,
   `${internalNamespaces.security}.alertzero-type`,
   `${internalNamespaces.platformSignificantEvents}.feature-identification-type`,
+  `${internalNamespaces.platformSignificantEvents}.metrics-feature-identification-type`,
   `${internalNamespaces.platformSignificantEvents}.ki-query-generation-type`,
   `${internalNamespaces.platformContextEngine}.setup-type`,
 ] as const;
@@ -245,6 +246,7 @@ export const AGENT_BUILDER_BUILTIN_SKILLS = [
   'knowledge-indicators-management',
   'ki-identification-management',
   'feature-identification',
+  'metrics-feature-identification',
   'ki-query-generation',
   'streams-memory-synthesis',
   'streams-memory-consolidation',

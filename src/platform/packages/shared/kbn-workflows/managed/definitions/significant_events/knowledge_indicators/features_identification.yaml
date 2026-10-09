@@ -1,12 +1,19 @@
 # KI Features Identification Workflow
 #
-# On-demand workflow that identifies KI features for a single stream.
+# On-demand workflow that identifies KI features for a single source.
 #
 # Flow:
-#   init → while(iterationCount < max) {
-#     prepare → if(noDocuments) break → identify_inferred → update_state → mark_success
-#     → track_convergence → if(converged) break
-#   } → if(allFailed) fail → identify_computed → output
+#   init → read NightshiftSource.type →
+#     entity loop (every type; only logs use diverse sampling)
+#   → if(all entity iterations failed) fail
+#   → logs: computed features
+#   → metrics: catalogue loop
+#   → output
+#
+# Traces and unknown sources stop after the entity loop.
+# Computed features and the metrics catalogue do not fail the run.
+# The catalogue flag and a METRICS_INFO failure both end the catalogue
+# loop with no page, so a non-time-series metrics source does not call the LLM.
 #
 # Concurrency is keyed per source slug so only one identification run can be
 # active for a given source in a space at any time; overlapping triggers are
@@ -94,18 +101,57 @@ steps:
       totalCachedTokens: 0
       discoveredFeatures: []
       iterationResults: []
+      catalogueIterationResults: []
+      catalogueBarrenCount: 0
       connectorId: ""
       barrenCount: 0
+      sourceType: ""
+      entityDiverseRatio: 0
+      computedFeaturesCount: 0
       effectivePatience: "${{ inputs.convergencePatience | at_least: 1 }}"
 
   # -----------------------------------------------------------------------
-  # Step 2: Main loop — each pass samples, then identifies inferred features.
+  # Step 2: Read the source signal. Entity extraction always runs.
+  #         Diverse sampling needs a log message, so every other type
+  #         draws a random sample.
+  # -----------------------------------------------------------------------
+  - name: probe_mode
+    type: kibana.request
+    with:
+      method: POST
+      path: "/s/{{ workflow.spaceId }}/internal/streams/{{ inputs.sourceId }}/features/_identify/mode"
+      headers:
+        x-elastic-internal-origin: "kibana"
+        x-nightshift-source-revision: "{{ inputs.sourceRevision }}"
+
+  - name: store_mode
+    type: data.set
+    with:
+      sourceType: "${{ steps.probe_mode.output.type }}"
+
+  - name: resolve_diverse_ratio
+    type: if
+    condition: "${{ variables.sourceType == 'logs' }}"
+    steps:
+      - name: use_input_diverse_ratio
+        type: data.set
+        with:
+          entityDiverseRatio: "${{ inputs.diverseRatio }}"
+    else:
+      - name: use_random_sample
+        type: data.set
+        with:
+          entityDiverseRatio: 0
+
+  # -----------------------------------------------------------------------
+  # Step 3: Entity extraction. Same agent for every source type.
+  #         Only logs use diverse sampling; other types have no message field
+  #         to categorize.
   # -----------------------------------------------------------------------
   - name: identify_loop
     type: while
     condition: "${{ variables.iterationResults.size < inputs.maxIterations }}"
     steps:
-      # 2a: Sample documents for this iteration.
       - name: prepare
         type: kibana.request
         with:
@@ -121,10 +167,9 @@ steps:
             iteration: "${{ variables.iterationResults.size | plus: 1 }}"
             sampleSize: "${{ inputs.sampleSize }}"
             entityFilteredRatio: "${{ inputs.entityFilteredRatio }}"
-            diverseRatio: "${{ inputs.diverseRatio }}"
+            diverseRatio: "${{ variables.entityDiverseRatio }}"
             maxEntityFilters: "${{ inputs.maxEntityFilters }}"
 
-      # 2b: If no documents were returned, stop the loop.
       - name: check_docs
         type: if
         condition: "steps.prepare.output.hasDocuments:false"
@@ -132,7 +177,6 @@ steps:
           - name: stop_loop
             type: loop.break
 
-      # 2c: Infer and reconcile from the prepared sample.
       - name: identify_inferred
         type: kibana.request
         with:
@@ -150,7 +194,6 @@ steps:
             maxExcludedFeaturesInPrompt: "${{ inputs.maxExcludedFeaturesInPrompt }}"
             maxPreviouslyIdentifiedFeatures: "${{ inputs.maxPreviouslyIdentifiedFeatures }}"
 
-      # 2d: Update loop variables with iteration output.
       - name: update_state
         type: data.set
         with:
@@ -162,7 +205,6 @@ steps:
           totalTokens: "${{ variables.totalTokens | plus: steps.identify_inferred.output.iterationResult.tokensUsed.total }}"
           totalCachedTokens: "${{ variables.totalCachedTokens | plus: steps.identify_inferred.output.iterationResult.tokensUsed.cached }}"
 
-      # 2e: Track whether at least one iteration succeeded.
       - name: mark_success
         type: if
         condition: "${{ steps.identify_inferred.output.iterationResult.state == 'success' }}"
@@ -172,7 +214,6 @@ steps:
             with:
               hasSuccess: true
 
-      # 2f: Convergence early-stop. LLM failures are neutral; only successful iterations move the counter.
       - name: track_convergence
         type: if
         condition: "${{ steps.identify_inferred.output.iterationResult.state == 'success' }}"
@@ -198,7 +239,8 @@ steps:
                 type: loop.break
 
   # -----------------------------------------------------------------------
-  # Step 3: Fail if iterations ran but none succeeded.
+  # Step 4: Fail if entity iterations ran but none succeeded.
+  #         Traces and unknown sources end after this check.
   # -----------------------------------------------------------------------
   - name: check_all_failed
     type: if
@@ -210,32 +252,135 @@ steps:
           message: "All LLM iterations failed for source {{ inputs.sourceId }}"
 
   # -----------------------------------------------------------------------
-  # Step 4: Identify computed features.
-  #         Computed features are supplementary; failure here should not
-  #         block the workflow, so we continue on error.
+  # Step 5: Computed features for logs sources.
+  #         Supplementary; failure here should not block the workflow.
   # -----------------------------------------------------------------------
   - name: identify_computed
-    type: kibana.request
-    on-failure:
-      retry:
-        max-attempts: 3
-        delay: "5s"
-        strategy: exponential
-      continue: true
-    with:
-      method: POST
-      path: "/s/{{ workflow.spaceId }}/internal/streams/{{ inputs.sourceId }}/features/_identify/computed"
-      headers:
-        x-elastic-internal-origin: "kibana"
-        x-nightshift-source-revision: "{{ inputs.sourceRevision }}"
-      body:
-        start: "${{ inputs.start }}"
-        end: "${{ inputs.end }}"
-        runId: "${{ execution.id }}"
-        featureTtlDays: "${{ inputs.featureTtlDays }}"
+    type: if
+    condition: "${{ variables.sourceType == 'logs' }}"
+    steps:
+      - name: identify_computed_request
+        type: kibana.request
+        on-failure:
+          retry:
+            max-attempts: 3
+            delay: "5s"
+            strategy: exponential
+          continue: true
+        with:
+          method: POST
+          path: "/s/{{ workflow.spaceId }}/internal/streams/{{ inputs.sourceId }}/features/_identify/computed"
+          headers:
+            x-elastic-internal-origin: "kibana"
+            x-nightshift-source-revision: "{{ inputs.sourceRevision }}"
+          body:
+            start: "${{ inputs.start }}"
+            end: "${{ inputs.end }}"
+            runId: "${{ execution.id }}"
+            featureTtlDays: "${{ inputs.featureTtlDays }}"
+      - name: store_computed_count
+        type: if
+        condition: "steps.identify_computed_request.output.computedFeaturesCount:*"
+        steps:
+          - name: set_computed_count
+            type: data.set
+            with:
+              computedFeaturesCount: "${{ steps.identify_computed_request.output.computedFeaturesCount }}"
 
   # -----------------------------------------------------------------------
-  # Step 5: Output results.
+  # Step 6: Metrics catalogue. Separate gather and reason.
+  #         A prepare or identify failure ends the loop and does not fail
+  #         the run. The prepare route returns no work when the catalogue
+  #         flag is off or METRICS_INFO cannot run.
+  # -----------------------------------------------------------------------
+  - name: catalogue_path
+    type: if
+    condition: "${{ variables.sourceType == 'metrics' }}"
+    steps:
+      - name: catalogue_loop
+        type: while
+        condition: "${{ variables.catalogueIterationResults.size < inputs.maxIterations }}"
+        steps:
+          - name: catalogue_prepare
+            type: kibana.request
+            on-failure:
+              continue: true
+            with:
+              method: POST
+              path: "/s/{{ workflow.spaceId }}/internal/streams/{{ inputs.sourceId }}/features/_identify/metrics/prepare"
+              headers:
+                x-elastic-internal-origin: "kibana"
+                x-nightshift-source-revision: "{{ inputs.sourceRevision }}"
+
+          - name: catalogue_check_work
+            type: if
+            condition: "steps.catalogue_prepare.output.hasWork:true"
+            else:
+              - name: catalogue_stop_loop
+                type: loop.break
+            steps:
+              - name: catalogue_identify
+                type: kibana.request
+                on-failure:
+                  continue: true
+                with:
+                  method: POST
+                  path: "/s/{{ workflow.spaceId }}/internal/streams/{{ inputs.sourceId }}/features/_identify/metrics"
+                  headers:
+                    x-elastic-internal-origin: "kibana"
+                    x-nightshift-source-revision: "{{ inputs.sourceRevision }}"
+                  body:
+                    connectorId: "${{ inputs.connectorId }}"
+                    runId: "${{ execution.id }}"
+                    iteration: "${{ variables.catalogueIterationResults.size | plus: 1 }}"
+                    cataloguePage: "${{ steps.catalogue_prepare.output.cataloguePage }}"
+                    maxExcludedFeaturesInPrompt: "${{ inputs.maxExcludedFeaturesInPrompt }}"
+                    maxPreviouslyIdentifiedFeatures: "${{ inputs.maxPreviouslyIdentifiedFeatures }}"
+
+              - name: catalogue_check_identified
+                type: if
+                condition: "steps.catalogue_identify.output.iterationResult:*"
+                else:
+                  - name: catalogue_stop_on_error
+                    type: loop.break
+                steps:
+                  - name: catalogue_update_state
+                    type: data.set
+                    with:
+                      connectorId: "${{ steps.catalogue_identify.output.connectorId }}"
+                      discoveredFeatures: "${{ steps.catalogue_identify.output.discoveredFeatures }}"
+                      catalogueIterationResults: "${{ variables.catalogueIterationResults | push: steps.catalogue_identify.output.iterationResult }}"
+                      totalCompletionTokens: "${{ variables.totalCompletionTokens | plus: steps.catalogue_identify.output.iterationResult.tokensUsed.completion }}"
+                      totalPromptTokens: "${{ variables.totalPromptTokens | plus: steps.catalogue_identify.output.iterationResult.tokensUsed.prompt }}"
+                      totalTokens: "${{ variables.totalTokens | plus: steps.catalogue_identify.output.iterationResult.tokensUsed.total }}"
+                      totalCachedTokens: "${{ variables.totalCachedTokens | plus: steps.catalogue_identify.output.iterationResult.tokensUsed.cached }}"
+
+                  - name: catalogue_track_convergence
+                    type: if
+                    condition: "${{ steps.catalogue_identify.output.iterationResult.state == 'success' }}"
+                    steps:
+                      - name: catalogue_update_counter
+                        type: if
+                        condition: "${{ steps.catalogue_identify.output.iterationResult.newFeatures.size > 0 }}"
+                        steps:
+                          - name: catalogue_reset_counter
+                            type: data.set
+                            with:
+                              catalogueBarrenCount: 0
+                        else:
+                          - name: catalogue_bump_counter
+                            type: data.set
+                            with:
+                              catalogueBarrenCount: "${{ variables.catalogueBarrenCount | plus: 1 }}"
+                      - name: catalogue_maybe_stop
+                        type: if
+                        condition: "${{ variables.catalogueBarrenCount >= variables.effectivePatience }}"
+                        steps:
+                          - name: catalogue_stop_converged
+                            type: loop.break
+
+  # -----------------------------------------------------------------------
+  # Step 7: Output results.
   # -----------------------------------------------------------------------
   - name: output_result
     type: workflow.output
@@ -243,10 +388,11 @@ steps:
       sourceId: "${{ inputs.sourceId }}"
       connectorId: "${{ variables.connectorId }}"
       discoveredFeatures: "${{ variables.discoveredFeatures }}"
-      computedFeaturesCount: "${{ steps.identify_computed.output.computedFeaturesCount }}"
+      computedFeaturesCount: "${{ variables.computedFeaturesCount }}"
       tokensUsed:
         completion: "${{ variables.totalCompletionTokens }}"
         prompt: "${{ variables.totalPromptTokens }}"
         total: "${{ variables.totalTokens }}"
         cached: "${{ variables.totalCachedTokens }}"
       iterations: "${{ variables.iterationResults }}"
+      catalogueIterations: "${{ variables.catalogueIterationResults }}"

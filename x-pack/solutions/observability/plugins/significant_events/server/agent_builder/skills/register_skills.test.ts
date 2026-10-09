@@ -21,6 +21,7 @@ import {
   FINALIZE_FEATURES_TOOL_ID,
 } from './feature_identification';
 import { createSignificantEventsServer } from '../utils/test_helpers';
+import { METRICS_FEATURE_IDENTIFICATION_SKILL_ID } from './metrics_feature_identification';
 
 const KI_IDENTIFICATION_SKILL_ID = 'ki-identification-management';
 const INVESTIGATION_SKILL_ID = streamsInvestigationManagementSkill.id;
@@ -33,6 +34,7 @@ const CORE_SKILL_IDS = [
   significantEventsKIGroundingSkill.id,
   significantEventsManagementSkill.id,
   FEATURE_IDENTIFICATION_SKILL_ID,
+  METRICS_FEATURE_IDENTIFICATION_SKILL_ID,
   INVESTIGATION_SKILL_ID,
 ];
 

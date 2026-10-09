@@ -16,6 +16,7 @@ import { createKIQueryGenerationSkill } from './ki_query_generation';
 import { knowledgeIndicatorsManagementSkill } from './knowledge_indicators_management';
 import { createKiIdentificationManagementSkill } from './ki_identification_management';
 import { featureIdentificationSkill } from './feature_identification';
+import { metricsFeatureIdentificationSkill } from './metrics_feature_identification';
 import { significantEventsManagementSkill } from './significant_events_management';
 import { significantEventsKIGroundingSkill } from './significant_events_ki_grounding';
 import { streamsInvestigationManagementSkill } from './investigation_management';
@@ -76,6 +77,7 @@ export const registerSignificantEventsSkills = async ({
     significantEventsKIGroundingSkill,
     significantEventsManagementSkill,
     featureIdentificationSkill,
+    metricsFeatureIdentificationSkill,
     ...(streamsKIsOnboardingClient && maintenanceService
       ? [
           createKiIdentificationManagementSkill({

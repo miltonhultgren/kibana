@@ -34,6 +34,16 @@ export const INFERRED_FEATURE_TYPES = [
   'schema',
 ] as const;
 
+// Catalogue KIs produced by metrics extraction. Kept out of INFERRED_FEATURE_TYPES so the
+// logs identification agent and its output schema do not emit them.
+export const METRIC_FEATURE_TYPE = 'metric' as const;
+export const DIMENSION_FEATURE_TYPE = 'dimension' as const;
+
+export const METRIC_CATALOGUE_FEATURE_TYPES = [
+  METRIC_FEATURE_TYPE,
+  DIMENSION_FEATURE_TYPE,
+] as const;
+
 // TODO: it would be nice to rename id->slug and uuid->id for consistency with queries
 // The owning source is not part of the write payload: the server stamps it from the
 // route (or tool) it was submitted through. See `featureSchema` for the read shape.

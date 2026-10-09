@@ -8,6 +8,7 @@
 import { loggingSystemMock } from '@kbn/core-logging-server-mocks';
 import {
   createQueryValidationContext,
+  QUERY_GENERATION_EXCLUDED_FEATURE_TYPES,
   validateKIQueries,
   type ValidatedKIQuery,
 } from '@kbn/nightshift-ai';
@@ -138,7 +139,7 @@ describe('ki_queries_validate tool', () => {
 
     expect(getFeatures).toHaveBeenCalledWith('logs.test', {
       featureIds: ['feature-1'],
-      excludedType: ['log_samples'],
+      excludedType: [...QUERY_GENERATION_EXCLUDED_FEATURE_TYPES],
     });
     expect(createQueryValidationContextMock).toHaveBeenCalledWith(
       expect.objectContaining({

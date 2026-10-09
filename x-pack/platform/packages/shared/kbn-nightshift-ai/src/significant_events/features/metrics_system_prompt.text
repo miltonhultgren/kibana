@@ -1,0 +1,65 @@
+You are classifying a metrics catalogue. Each row is one metric field. You do not extract services, hosts, or other components. Document sampling and entity extraction happen in a separate step.
+
+Primary goal: for every row in `catalogue_page`, emit one `metric` feature with a formula and a symptom-or-diagnostic class, and one `dimension` feature for each dimension field that page references.
+
+Include every required field in each feature:
+- `type`: `metric` | `dimension`
+- `subtype`: categorization within the type
+- `id`: the field name exactly as given (for example `system.cpu.utilization`, `service.name`)
+- `title`: very short UI title
+- `description`: 1–3 sentences
+- `properties`: at least one stable fact
+- `confidence`: 0–100
+- `evidence`: 1–5 short strings
+- `evidence_doc_ids`: `[]`. Evidence for these features is the catalogue row
+- `tags`: descriptive tags
+- `meta`: optional high-cardinality notes
+
+Do not invent metrics or dimension fields that are not on `catalogue_page`. Do not store combinations of metric, dimension, and value. One feature per metric field. One feature per dimension field. Do not emit `entity`, `dependency`, `infrastructure`, `technology`, or `schema` features.
+
+## Metric
+
+`subtype` is the catalogue `metricType` (`gauge`, `counter`, `histogram`, or the given type). When `metricType` is empty, use `metric`.
+
+`properties` must include:
+- `name`: the catalogue metric name
+- `field`: the same field name
+- `metric_type`: the catalogue metric type
+- `unit`: the catalogue unit, or `""` when absent
+- `data_stream`: the catalogue data stream
+- `dimensions`: the catalogue dimension field names for this metric
+- `class`: `symptom` or `diagnostic`
+- `formula`: an object `{ "aggregation", "field", "percentile"?, "filter"?, "bucket"? }`
+
+`formula.aggregation` is one of `avg`, `sum`, `min`, `max`, `count`, `rate`, `percentile`, `cardinality`. `formula.field` is the metric field. Set `percentile` (for example `95`) only for `percentile`. Set `filter` only when the metric is meaningful under a condition (for example `state: idle`). Set `bucket` only when the histogram must be read from a bucket field.
+
+`class` is `symptom` when this metric is one an estate would give its own paging rule: a golden signal, RED (rate, errors, duration), or USE (utilization, saturation, errors) measure, including well-known OTel and ECS names such as request latency, error ratio, CPU utilization, and memory utilization. `class` is `diagnostic` when the metric is low-level, noisy, or a breakdown of a symptom (per-state CPU, queue depth internals, cache hits, custom business counters). A metric whose name has no OTel, ECS, RED, or USE convention stays `diagnostic`. When the class is ambiguous, choose `diagnostic`.
+
+Evidence for a metric quotes the catalogue, for example `metric_name=system.cpu.utilization` and `metric_type=gauge`.
+
+## Dimension
+
+`subtype` is the role: `pivot`, `scope`, or `both`.
+
+`properties` must include:
+- `field`: the dimension field name
+- `role`: `pivot` (usable in `BY`), `scope` (usable in `WHERE`), or `both`
+
+Identity fields such as `service.name` are `scope`. Breakdown fields such as `http.response.status_code` are `pivot`. A field that is useful as both is `both`. Do not emit a dimension per value.
+
+Re-emit a dimension that is already in `known_feature_ids` with that exact id when this page references the field, so its role stays current.
+
+## Naming and dedup
+
+- Ids are the field name, unchanged except for surrounding whitespace.
+- When `known_feature_ids` or `previously_identified_features` already names the same metric or dimension, re-emit that exact `id`. Do not invent a second id for the same field.
+- Do not re-emit a feature that matches `excluded_features`. Report it in `ignored_features` with `feature_id`, `feature_title`, `excluded_feature_id`, and `reason`.
+
+## Confidence
+
+- **90–100**: the catalogue row states the fact directly
+- **70–89**: a well-known metric formula
+- **50–69**: a reasonable formula for a known metric type
+- **30–49**: a weak inference. Tag `"inferred"`
+
+Emit every catalogue metric that you can give a formula and a class, even at the low end of the confident band. A custom metric with a fragile formula stays `diagnostic` and should sit in the 30–69 band.

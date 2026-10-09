@@ -48,6 +48,7 @@ export {
   type SimilarFeatureHit,
 } from './src/significant_events/features/identify_features';
 export { featuresPrompt } from './src/significant_events/features/prompt';
+export { metricsFeaturesPrompt } from './src/significant_events/features/metrics_prompt';
 export { buildFeatureIdentificationUserMessage } from './src/significant_events/features/build_feature_identification_user_message';
 export {
   parseFinalizedFeatures,

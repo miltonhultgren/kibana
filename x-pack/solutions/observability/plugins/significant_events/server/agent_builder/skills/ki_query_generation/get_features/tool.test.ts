@@ -7,6 +7,7 @@
 
 import { forbidden } from '@hapi/boom';
 import { loggingSystemMock } from '@kbn/core-logging-server-mocks';
+import { QUERY_GENERATION_EXCLUDED_FEATURE_TYPES } from '@kbn/nightshift-ai';
 import type { GetScopedClients, RouteHandlerScopedClients } from '../../../../routes/types';
 import {
   createMockToolContext,
@@ -80,7 +81,7 @@ describe('ki_features_get tool', () => {
       type: ['entity'],
       minConfidence: 70,
       limit: 25,
-      excludedType: ['log_samples'],
+      excludedType: [...QUERY_GENERATION_EXCLUDED_FEATURE_TYPES],
     });
     expect(result.results).toEqual([
       {

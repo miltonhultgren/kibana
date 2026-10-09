@@ -13,3 +13,10 @@
  */
 export const SIGNIFICANT_EVENTS_SEMANTIC_CODE_SEARCH_GROUNDING_ENABLED_FLAG =
   'streams.significantEventsSemanticCodeSearchGroundingEnabled';
+
+/**
+ * Adds the metrics catalogue loop beside entity extraction for time-series streams.
+ * Entity identification still runs. The catalogue loop is skipped when this is off.
+ */
+export const SIGNIFICANT_EVENTS_METRICS_CATALOGUE_ENABLED_FLAG =
+  'streams.significantEventsMetricsCatalogueEnabled';

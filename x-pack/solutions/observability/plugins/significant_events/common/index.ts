@@ -9,7 +9,10 @@ export { QUERY_STATUSES } from './queries';
 export type { QueryStatus } from './queries';
 export type { PaginatedResponse } from './pagination';
 
-export { SIGNIFICANT_EVENTS_SEMANTIC_CODE_SEARCH_GROUNDING_ENABLED_FLAG } from './feature_flags';
+export {
+  SIGNIFICANT_EVENTS_METRICS_CATALOGUE_ENABLED_FLAG,
+  SIGNIFICANT_EVENTS_SEMANTIC_CODE_SEARCH_GROUNDING_ENABLED_FLAG,
+} from './feature_flags';
 
 export {
   SIGNIFICANT_EVENTS_APP_ROUTE,
